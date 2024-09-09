@@ -1,4 +1,4 @@
-Welcome to the GitHub repository for **Lentivirus-GLUE-ERV***!
+Welcome to the GitHub repository for **Lentivirus-GLUE-ERV**!
 
 Lentivirus-GLUE-ERV extends [Lentivirus-GLUE](https://github.com/giffordlabcvr/Lentivirus-GLUE) through the incorporation of endogenous lentiviruses.
 
