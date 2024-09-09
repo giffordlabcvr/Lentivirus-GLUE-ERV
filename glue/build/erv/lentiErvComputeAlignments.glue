@@ -1,0 +1,34 @@
+  #~# Clean up
+  delete module lentiErvCompoundAlignerPsiv
+  delete module lentiErvCompoundAlignerRelik
+  delete module lentiErvCompoundAlignerMelv
+  delete module lentiErvCompoundAlignerDelv
+  delete module lentiErvCompoundAlignerSpELV
+  delete module lentiErvCompoundAlignerSpELV
+  delete module fastaAlignmentExporter
+
+  #~# Create modules
+  create module -f modules/erv/lentiErvCompoundAlignerPsiv.xml
+  create module -f modules/erv/lentiErvCompoundAlignerRelik.xml
+  create module -f modules/erv/lentiErvCompoundAlignerMelv.xml
+  create module -f modules/erv/lentiErvCompoundAlignerDelv.xml
+  create module -f modules/erv/lentiErvCompoundAlignerSpELV.xml
+  create module -t fastaAlignmentExporter
+
+
+  #~# Compute alignments
+  compute alignment AL_RELIK     lentiErvCompoundAlignerRelik
+  compute alignment AL_MELV      lentiErvCompoundAlignerMelv
+  compute alignment AL_PSIV1     lentiErvCompoundAlignerPsiv
+  compute alignment AL_PSIV2     lentiErvCompoundAlignerPsiv
+  compute alignment AL_DELV      lentiErvCompoundAlignerDelv
+  compute alignment AL_SpELV     lentiErvCompoundAlignerSpELV
+
+  
+  #~# Export alignments
+  module fastaAlignmentExporter export AL_RELIK -a -o AL_RELIK.fas
+  module fastaAlignmentExporter export AL_MELV -a -o AL_MELV.fas
+  module fastaAlignmentExporter export AL_PSIV1 -a -o AL_PSIV1.fas  
+  module fastaAlignmentExporter export AL_PSIV2 -a -o AL_PSIV2.fas  
+  module fastaAlignmentExporter export AL_DELV -a -o AL_DELV.fas  
+  module fastaAlignmentExporter export AL_SpELV -a -o AL_SpELV.fas    

@@ -1,0 +1,30 @@
+
+  #~# Define constrained alignment tree
+  alignment AL_ROOT
+
+	# Add all ERV members
+	add member -w "source.name = 'fasta-digs-erv'"
+	add member -w "source.name = 'fasta-refseqs-erv'"
+	add member -w "source.name = 'ncbi-curated-erv'"
+
+	
+	extract child AL_RELIK  --refName REF_RELIK
+	demote member AL_RELIK  --whereClause "sequence.species = 'RELIK'"
+
+	extract child AL_MELV  --refName REF_MELV
+	demote member AL_MELV  --whereClause "sequence.species = 'MELV'"
+	
+	extract child AL_PSIV1  --refName REF_pSIV1	
+	demote member AL_PSIV1  --whereClause "sequence.species = 'PSIV1'"
+	
+	extract child AL_PSIV2  --refName REF_pSIV2
+	demote member AL_PSIV2  --whereClause "sequence.species = 'PSIV2'"
+
+	extract child AL_DELV   --refName REF_DELV
+ 	demote member AL_DELV   --whereClause "sequence.species = 'DELV'"
+
+	extract child AL_SpELV  --refName REF_SpELV
+	demote member AL_SpELV  --whereClause "sequence.species = 'SpELV'"
+   
+	exit
+	

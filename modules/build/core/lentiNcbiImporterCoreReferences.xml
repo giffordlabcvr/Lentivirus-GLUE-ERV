@@ -1,0 +1,33 @@
+<!-- Lentivirus main group references -->
+<ncbiImporter>
+
+  <sourceName>ncbi-refseqs-core</sourceName>
+  <giNumberFieldName>gb_gi_number</giNumberFieldName>
+  
+  <specificPrimaryAccessions>
+
+
+	<!-- Bovine group -->	
+	<primaryAccession>M32690</primaryAccession>
+
+	<!-- Smmall ruminant lentivirus group -->		
+	<primaryAccession>NC_001452</primaryAccession>
+	
+	<!-- Equine group -->		
+	<primaryAccession>AF016316</primaryAccession>
+	
+	<!-- Feline group -->
+	<primaryAccession>M25381</primaryAccession>
+
+	<!-- Primate group - SIV-cpz-gor-human -->	
+	<primaryAccession>AF033819</primaryAccession> <!-- HIV-1 master -->	
+	<primaryAccession>X05291</primaryAccession> <!-- HIV-2 master -->	
+
+
+  </specificPrimaryAccessions>
+  
+  <sequenceFormat>GENBANK_XML</sequenceFormat>
+  <sequenceIdField>PRIMARY_ACCESSION</sequenceIdField>
+  
+</ncbiImporter>
+

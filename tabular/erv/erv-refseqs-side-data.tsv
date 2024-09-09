@@ -1,0 +1,7 @@
+sequenceID	full_name	name	subgenus	reftype	host_group_name	host_group_taxlevel
+DELV-con	Dermopteran endogenous lentivirus	DELV	Dermopteran	consensus	Dermoptera	order
+MELV-con	Mustelid endogenous nlentvirus	MELV	Mustelid	consensus	Mustelidae	order
+PSIV1-con	Prosimian lentivirus 1	PSIV1	Prosimian	consensus	Microcebus	genus
+PSIV2-con	Prosimian lentivirus 2	PSIV2	Prosimian	consensus	Cheirogaleus	genus
+RELIK-con	Rabbit endogenous lentivirus type K	RELIK	Leporid	consensus	Leporidae	family
+SpELV-con	Springhare endogenous lentivirus	SpELV	Pedetes	consensus	Pedetes	species

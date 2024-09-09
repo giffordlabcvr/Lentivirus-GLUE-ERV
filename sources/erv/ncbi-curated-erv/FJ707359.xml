@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>FJ707359</GBSeq_locus>
+    <GBSeq_length>2165</GBSeq_length>
+    <GBSeq_strandedness>double</GBSeq_strandedness>
+    <GBSeq_moltype>DNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>PRI</GBSeq_division>
+    <GBSeq_update-date>13-APR-2009</GBSeq_update-date>
+    <GBSeq_create-date>16-MAR-2009</GBSeq_create-date>
+    <GBSeq_definition>Microcebus murinus endogenous virus Grey mouse lemur immunodeficiency virus 1 clone MMU2 pol gene, partial sequence; orf1 and orf2 genes, complete sequence; and env gene, partial sequence</GBSeq_definition>
+    <GBSeq_primary-accession>FJ707359</GBSeq_primary-accession>
+    <GBSeq_accession-version>FJ707359.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|FJ707359.1|</GBSeqid>
+      <GBSeqid>gi|224828819</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Microcebus murinus (gray mouse lemur)</GBSeq_source>
+    <GBSeq_organism>Microcebus murinus</GBSeq_organism>
+    <GBSeq_taxonomy>Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia; Eutheria; Euarchontoglires; Primates; Strepsirrhini; Lemuriformes; Cheirogaleidae; Microcebus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..2165</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Gilbert,C.</GBAuthor>
+          <GBAuthor>Maxfield,D.G.</GBAuthor>
+          <GBAuthor>Goodman,S.M.</GBAuthor>
+          <GBAuthor>Feschotte,C.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Parallel germline infiltration of a lentivirus in two Malagasy lemurs</GBReference_title>
+        <GBReference_journal>PLoS Genet. 5 (3), E1000425 (2009)</GBReference_journal>
+        <GBReference_xref>
+          <GBXref>
+            <GBXref_dbname>doi</GBXref_dbname>
+            <GBXref_id>10.1371/journal.pgen.1000425</GBXref_id>
+          </GBXref>
+        </GBReference_xref>
+        <GBReference_pubmed>19300488</GBReference_pubmed>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..2165</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Gilbert,C.</GBAuthor>
+          <GBAuthor>Maxfield,D.G.</GBAuthor>
+          <GBAuthor>Goodman,S.M.</GBAuthor>
+          <GBAuthor>Feschotte,C.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (03-FEB-2009) Department of Biology, University of Texas at Arlington, 501 S Nedderman Dr, Arlington, TX 76010, USA</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..2165</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>2165</GBInterval_to>
+            <GBInterval_accession>FJ707359.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Microcebus murinus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic DNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>specimen_voucher</GBQualifier_name>
+            <GBQualifier_value>FMNH 161620 (Field Museum of Natural History)</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:30608</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>clone</GBQualifier_name>
+            <GBQualifier_value>MMU2</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>note</GBQualifier_name>
+            <GBQualifier_value>endogenous_virus: Grey mouse lemur immunodeficiency virus 1</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>gene</GBFeature_key>
+        <GBFeature_location>&lt;1..291</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>291</GBInterval_to>
+            <GBInterval_accession>FJ707359.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial5 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>pol</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>gene</GBFeature_key>
+        <GBFeature_location>292..376</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>292</GBInterval_from>
+            <GBInterval_to>376</GBInterval_to>
+            <GBInterval_accession>FJ707359.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>orf1</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>gene</GBFeature_key>
+        <GBFeature_location>370..603</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>370</GBInterval_from>
+            <GBInterval_to>603</GBInterval_to>
+            <GBInterval_accession>FJ707359.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>orf2</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>gene</GBFeature_key>
+        <GBFeature_location>534..&gt;2165</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>534</GBInterval_from>
+            <GBInterval_to>2165</GBInterval_to>
+            <GBInterval_accession>FJ707359.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_partial3 value="true"/>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>gene</GBQualifier_name>
+            <GBQualifier_value>env</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>agacagttcacgcggctgtctatatggctttatttgtcattaattttaaacaaaggggtggagtgggaggtacaactagatatgaagacatttagacatgggattggaagacttacaaaattaccatttcaaaaatttggactcgtaccatgtttactttaaacagccacctcaaaaaacctggcagggaccagctcgtctcctttataaggggcagggagcagtggtctgcgaggatcaaggaaagacaatagcagtacctagacgctactgcaagatcataacaggaggggaatagcatacagaatgcaggaatgttggactgactctgctttccgagtgtttcaacagcagggaccgttgctgccgaccctgagggattggagtgagtggagagaggcctctctgcaactactgccatatatggcaccagtaacagcggaagaaagagactggttcgaccttctagcttatgctttgcctaaagtacccctttctgtcttaatacctattttcagggggccgcaagaaaaatggcgggtaagcttgcaacgctggctttggtatactcactttgcgcgggggcactgggaacacaattagcattgcttaaaaccccacccattgttagacttcttaccaataatacagaaccccctatagtgttctgtgagtctgagcaggggcacttgggatgtgctccagctctattttcgtatgttaatgcttctatcaatatttctcacccttagaggaagaggttgatccatgggatagctctttgggattgttcacagactgggtatccggagcccatatgcagtggctgactcaaagagcccaggaatggaggggatattgccaaccaatgaactgtacgcaggctaataactttactagaaattgtaccaggccttatgtggattatgaaagtagacctgaaaacattcaggagacaatttcacatatgcagttaaattgtactaattcaacctgtgtgtggaaagagtgtaaacaaagattgttcttccggggtaacccacctcttgatgcccaaacctttagactttgtgttagaccaccttttgctttaagaagatgtccaccaaccaataggacggactggaggcaaccttataagtgctctgagcaatgcctaacttcctgtacagaggcagtaaatataactgtcgaaactttgtggcaatcacagggagtgttaaacccaaatcaaacaggggtgagctgttaccaagagggaatgagggtaacagtccaaactgagcacgaccccattgggataaaggtcttgcagactgtgaaaataccaaaaatgacctgtaatcttacaggagctcaaaataacagtggtcaaaagggcatagttgacccctgttatttcctttgctataacgccgcaaagaaaggaagaggaggcaacggcaatcccatagtgcttatctcctgtaagtacaatgggacgtctggaacgttaaccaattgtgaaagagtttttaaagcgtcaatgccagggccacaagatcccctatattatccaacctatcctggggaaaagtggttactgcatctcccaatggaggaaacaggggatccagtacagtgtaatgcctctttccagtggctatcaaggagtgtggcgttacacgacactggggtactgaagcccaatatctatagctcctttggggcagaggaagcatggagagatatggtagaaaactacatagtgtatcgtttccaggaatggacagtggtacctgttcaggagggagaaataatattatctcgaccaaggagggaaccagtgacaataatcatggctctgatatcgctgttcactcaggttagaacagctataaatgtggccgcaatgcaccgggcgggaactgtggtgaccgcagttggggtacttgtggacaacgaggggctcctatgggagtcacagaggcgcttaggcaacttagtggatcacctagcgttccaggtacaggtgttacaagcgagattgcaggctatggagtatgtgttgcaggttcaagaatcttggtctgaattaggctgtgttccttcactgtgccttacgggcatcccttggaacgatacatggggagttcccaatataacccagacttggaaggagtggg</GBSeq_sequence>
+  </GBSeq>

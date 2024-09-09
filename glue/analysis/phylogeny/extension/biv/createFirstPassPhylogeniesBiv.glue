@@ -1,0 +1,76 @@
+  # Clean up from any previous run of this file
+  delete alignment biv_All
+  delete alignment AL_UNC_biv_Tree_gag
+  delete alignment AL_UNC_biv_Tree_pol
+  delete alignment AL_UNC_biv_Tree_env
+  
+  delete module bivFeaturePresenceRecorder
+  delete module fastaAlignmentExporter
+  delete module bivTreeAlignmentImporterNucs
+  delete module raxmlPhylogenyGenerator
+  delete module bivPhyloUtility
+  delete module lentiFigTreeAnnotationExporter
+  
+  
+  # Create all the modules we need
+  create module -f modules/extension/bivFeaturePresenceRecorder.xml
+  create module -f modules/extension/fastaAlignmentExporter.xml
+  create module -f modules/extension/bivTreeAlignmentImporterNucs.xml
+  create module -f modules/extension/bivPhyloUtility.xml
+  create module -f modules/extension/lentiFigTreeAnnotationExporter.xml
+  create module -t raxmlPhylogenyGenerator
+
+  # Create alignment biv sequences
+  create alignment biv_All -r REF_MASTER_biv-A
+  alignment biv_All add member -w "source.name = 'ncbi-curated-biv' and lab_construct = null"
+  compute alignment biv_All bivCompoundAligner
+
+
+  module bivFeaturePresenceRecorder record feature-presence biv_All --recursive --featureName whole_genome --descendentFeatures
+  module fastaAlignmentExporter
+	export biv_All -w "fLocNotes.featureLoc.feature.name = 'gag' and fLocNotes.ref_nt_coverage_pct >= 60" -o alignments/tree/gag.export.aln.fna
+	export biv_All -w "fLocNotes.featureLoc.feature.name = 'pol' and fLocNotes.ref_nt_coverage_pct >= 60" -o alignments/tree/pol.export.aln.fna
+	export biv_All -w "fLocNotes.featureLoc.feature.name = 'env' and fLocNotes.ref_nt_coverage_pct >= 60" -o alignments/tree/env.export.aln.fna
+	exit
+
+  # Import the alignments to GLUE
+  module bivTreeAlignmentImporterNucs import AL_UNC_biv_Tree_gag -f alignments/tree/gag.export.aln.fna
+  module bivTreeAlignmentImporterNucs import AL_UNC_biv_Tree_pol -f alignments/tree/pol.export.aln.fna
+  module bivTreeAlignmentImporterNucs import AL_UNC_biv_Tree_env -f alignments/tree/env.export.aln.fna
+
+
+  # Create the phylogeny
+  module raxmlPhylogenyGenerator
+    generate nucleotide phylogeny AL_UNC_biv_Tree_gag -a -o trees/root/gag.export_nucs.tre NEWICK_BOOTSTRAPS 
+    generate nucleotide phylogeny AL_UNC_biv_Tree_pol -a -o trees/root/pol.export_nucs.tre NEWICK_BOOTSTRAPS 
+    generate nucleotide phylogeny AL_UNC_biv_Tree_env -a -o trees/root/env.export_nucs.tre NEWICK_BOOTSTRAPS 
+    exit
+
+
+  # Re-root phylogeny 
+  module bivPhyloUtility 
+	reroot-phylogeny \
+      --inputFile trees/root/gag.export_nucs.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/root/gag.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/root/pol.export_nucs.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/root/pol.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/root/env.export_nucs.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/root/env.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAP
+    exit
+
+
+  # Export annotations
+  module lentiFigTreeAnnotationExporter 
+    export figtree-annotation AL_UNC_biv_Tree_gag -f trees/root/gagFigtreeAnnotations.tsv
+    export figtree-annotation AL_UNC_biv_Tree_pol -f trees/root/polFigtreeAnnotations.tsv
+    export figtree-annotation AL_UNC_biv_Tree_env -f trees/root/envFigtreeAnnotations.tsv
+  exit
+  
+  

@@ -1,0 +1,33 @@
+
+  # Clean up in case of previous execution
+  delete module raxmlPhylogenyGenerator
+  delete module lentiPhyloUtility
+  delete module alignmentColumnsSelectorSrlvAgenome
+ 
+
+  # Create all the modules we need
+  create module -t raxmlPhylogenyGenerator
+  create module -f modules//analysis/phylogeny/core/lentiPhyloUtility.xml
+  create module -f modules/analysis/phylogeny/extension/srlv/alignmentColumnsSelectorSrlvAgenome.xml
+  
+  # Create the phylogenies
+  module raxmlPhylogenyGenerator
+
+    generate nucleotide phylogeny AL_SRLV_A -s alignmentColumnsSelectorSrlvAgenome \
+      -w "fLocNotes.featureLoc.feature.name = 'whole_genome' and fLocNotes.ref_nt_coverage_pct >= 80" \
+      -o trees/tip/srlv-a/lenti-srlv-a-genome.tre NEWICK_BOOTSTRAPS
+
+    exit
+
+
+
+  # Re-root phylogeny 
+  module lentiPhyloUtility 
+
+	reroot-phylogeny \
+      --inputFile trees/tip/srlv-a/lenti-srlv-a-genome.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/tip/srlv-a/lenti-srlv-a-genome.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+    exit
+

@@ -1,0 +1,35 @@
+
+  delete module figTreeAnnotationExporterSrlv
+
+  create module -f modules/analysis/phylogeny/extension/srlv/figTreeAnnotationExporterSrlv.xml
+
+
+  # Export annotations
+  module figTreeAnnotationExporterSrlv 
+
+    export figtree-annotation AL_SRLV_B1 -w "fLocNotes.featureLoc.feature.name = 'matrix'  \
+      and fLocNotes.ref_nt_coverage_pct >= 80" -f trees/tip/srlv-b/lenti-srlv-b1-matrix.figtree-annotations.tsv
+
+    export figtree-annotation AL_SRLV_B1 -w "fLocNotes.featureLoc.feature.name = 'capsid'  \
+      and fLocNotes.ref_nt_coverage_pct >= 80" -f trees/tip/srlv-b/lenti-srlv-b1-capsid.figtree-annotations.tsv
+
+    export figtree-annotation AL_SRLV_B1 -w "fLocNotes.featureLoc.feature.name = 'gag'  \
+      and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/tip/srlv-b/lenti-srlv-b1-gag.figtree-annotations.tsv
+
+    export figtree-annotation AL_SRLV_B1 -w "fLocNotes.featureLoc.feature.name = 'rt'  \
+      and fLocNotes.ref_nt_coverage_pct >= 70" -f trees/tip/srlv-b/lenti-srlv-b1-rt.figtree-annotations.tsv
+
+    export figtree-annotation AL_SRLV_B1 -w "fLocNotes.featureLoc.feature.name = 'in'  \
+      and fLocNotes.ref_nt_coverage_pct >= 60" -f trees/tip/srlv-b/lenti-srlv-b1-in.figtree-annotations.tsv
+
+    export figtree-annotation AL_SRLV_B1 -w "fLocNotes.featureLoc.feature.name = 'pol'  \
+      and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/tip/srlv-b/lenti-srlv-b1-pol.figtree-annotations.tsv
+
+    export figtree-annotation AL_SRLV_B1 -w "fLocNotes.featureLoc.feature.name = 'env'  \
+      and fLocNotes.ref_nt_coverage_pct >= 20" -f trees/tip/srlv-b/lenti-srlv-b1-env.figtree-annotations.tsv
+
+    export figtree-annotation AL_SRLV_B1 -w "fLocNotes.featureLoc.feature.name = 'whole_genome'  \
+      and fLocNotes.ref_nt_coverage_pct >= 80" -f trees/tip/srlv-b/lenti-srlv-b1-genome.figtree-annotations.tsv
+
+  exit
+

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<GBSeq>
+
+    <GBSeq_locus>FJ493034</GBSeq_locus>
+    <GBSeq_length>787</GBSeq_length>
+    <GBSeq_strandedness>double</GBSeq_strandedness>
+    <GBSeq_moltype>DNA</GBSeq_moltype>
+    <GBSeq_topology>linear</GBSeq_topology>
+    <GBSeq_division>MAM</GBSeq_division>
+    <GBSeq_update-date>26-FEB-2009</GBSeq_update-date>
+    <GBSeq_create-date>13-JAN-2009</GBSeq_create-date>
+    <GBSeq_definition>Lepus europaeus isolate 3 endogenous virus Rabbit endogenous lentivirus type K nonfunctional gag protein gene, complete sequence</GBSeq_definition>
+    <GBSeq_primary-accession>FJ493034</GBSeq_primary-accession>
+    <GBSeq_accession-version>FJ493034.1</GBSeq_accession-version>
+    <GBSeq_other-seqids>
+      <GBSeqid>gb|FJ493034.1|</GBSeqid>
+      <GBSeqid>gi|219815485</GBSeqid>
+    </GBSeq_other-seqids>
+    <GBSeq_source>Lepus europaeus (European hare)</GBSeq_source>
+    <GBSeq_organism>Lepus europaeus</GBSeq_organism>
+    <GBSeq_taxonomy>Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia; Eutheria; Euarchontoglires; Glires; Lagomorpha; Leporidae; Lepus</GBSeq_taxonomy>
+    <GBSeq_references>
+      <GBReference>
+        <GBReference_reference>1</GBReference_reference>
+        <GBReference_position>1..787</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Keckesova,Z.</GBAuthor>
+          <GBAuthor>Ylinen,L.M.</GBAuthor>
+          <GBAuthor>Towers,G.J.</GBAuthor>
+          <GBAuthor>Gifford,R.J.</GBAuthor>
+          <GBAuthor>Katzourakis,A.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Identification of a RELIK orthologue in the European hare (Lepus europaeus) reveals a minimum age of 12 million years for the lagomorph lentiviruses</GBReference_title>
+        <GBReference_journal>Virology 384 (1), 7-11 (2009)</GBReference_journal>
+        <GBReference_xref>
+          <GBXref>
+            <GBXref_dbname>doi</GBXref_dbname>
+            <GBXref_id>10.1016/j.virol.2008.10.045</GBXref_id>
+          </GBXref>
+        </GBReference_xref>
+        <GBReference_pubmed>19070882</GBReference_pubmed>
+      </GBReference>
+      <GBReference>
+        <GBReference_reference>2</GBReference_reference>
+        <GBReference_position>1..787</GBReference_position>
+        <GBReference_authors>
+          <GBAuthor>Keckesova,Z.</GBAuthor>
+          <GBAuthor>Ylinen,L.M.J.</GBAuthor>
+          <GBAuthor>Towers,G.J.</GBAuthor>
+          <GBAuthor>Gifford,R.J.</GBAuthor>
+          <GBAuthor>Katzourakis,A.</GBAuthor>
+        </GBReference_authors>
+        <GBReference_title>Direct Submission</GBReference_title>
+        <GBReference_journal>Submitted (26-NOV-2008) Department of Zoology, University of Oxford, South Parks Road, Oxford, Oxfordshire OX1 3PS, UK</GBReference_journal>
+      </GBReference>
+    </GBSeq_references>
+    <GBSeq_feature-table>
+      <GBFeature>
+        <GBFeature_key>source</GBFeature_key>
+        <GBFeature_location>1..787</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>787</GBInterval_to>
+            <GBInterval_accession>FJ493034.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>organism</GBQualifier_name>
+            <GBQualifier_value>Lepus europaeus</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>mol_type</GBQualifier_name>
+            <GBQualifier_value>genomic DNA</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>isolate</GBQualifier_name>
+            <GBQualifier_value>3</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>db_xref</GBQualifier_name>
+            <GBQualifier_value>taxon:9983</GBQualifier_value>
+          </GBQualifier>
+          <GBQualifier>
+            <GBQualifier_name>note</GBQualifier_name>
+            <GBQualifier_value>endogenous_virus: Rabbit endogenous lentivirus type K</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+      <GBFeature>
+        <GBFeature_key>misc_feature</GBFeature_key>
+        <GBFeature_location>1..787</GBFeature_location>
+        <GBFeature_intervals>
+          <GBInterval>
+            <GBInterval_from>1</GBInterval_from>
+            <GBInterval_to>787</GBInterval_to>
+            <GBInterval_accession>FJ493034.1</GBInterval_accession>
+          </GBInterval>
+        </GBFeature_intervals>
+        <GBFeature_quals>
+          <GBQualifier>
+            <GBQualifier_name>note</GBQualifier_name>
+            <GBQualifier_value>nonfunctional gag protein due to mutation</GBQualifier_value>
+          </GBQualifier>
+        </GBFeature_quals>
+      </GBFeature>
+    </GBSeq_feature-table>
+    <GBSeq_sequence>tccccctcccccagccgncagggntggnccagtgccactaacctcagatcagattaggggaattggattatcaccagaagcagcagctggccctagattcgntgatgccagaaccctctatagaacatgggttcttgaggtgcttcaagattgccagagaactaccagtggggcccctaaagcagtcagcatcagacaagggcccaaagaaccctaccctgagtttactaatcaattatttacccagattgatatggaaacatctagagaggatttgagaacatatttaaaggacaccatgaacattcaaaatgctaatgaagaatgtaaaaagttgcttagaaatttaagattaggagattcgttagaagaaaaaaatgtatgcctgtagagaatttagatccacctcctatgagatggccatgctggcagaggccttaaaggctggagatagacagcaagggtcaagaagttttcagggaaattgttacaggtgtggaaaaaaggggcatatggcaagaaattgtaggagtggagaaaaaactccgctaaaatgctataattgtgggagaacaggacatatagcaaaagtatgtagacagccaaaaaatgggaaagtggggggcaatgccccccagaccatgatggcgtctgcccagagtatccagtcatctatcccgccgtctgccccctgggggaaacacagaagtccctgtgacagggatctacccgaaactaccaaaatagaattaagacaaagacctaccttaaaggtaaacctaggggg</GBSeq_sequence>
+  </GBSeq>

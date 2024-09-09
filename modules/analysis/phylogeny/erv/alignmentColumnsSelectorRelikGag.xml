@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<alignmentColumnsSelector>
+
+    <relRefName>REF_RELIK</relRefName>
+    
+    <aminoAcidRegionSelector>
+        <featureName>gag</featureName>
+        <startCodon>1</startCodon>
+        <endCodon>478</endCodon>
+    </aminoAcidRegionSelector>
+    
+    <nucleotideRegionSelector>
+        <featureName>gag</featureName>
+        <startNt>597</startNt>
+        <endNt>2028</endNt>
+    </nucleotideRegionSelector>
+    
+</alignmentColumnsSelector>

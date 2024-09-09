@@ -1,0 +1,15 @@
+  # Clean up
+  delete module compoundAlignerEquine
+  delete module fastaAlignmentExporter
+
+  # Create modules
+  create module -f modules/build/extension/equine/compoundAlignerEquine.xml
+  create module -t fastaAlignmentExporter
+
+  # Compute alignments
+  alignment AL_Equine add member -w "source.name = 'ncbi-refseqs-equine'"
+  compute alignment AL_Equine compoundAlignerEquine
+  
+  # Export alignment
+  module fastaAlignmentExporter export AL_Equine -a -o AL_Equine.fas
+

@@ -1,0 +1,80 @@
+  
+
+  # BIV
+  create reference REF_BIV_L04974      ncbi-refseqs-bovine L04974
+  create reference REF_BIV_L04972      ncbi-refseqs-bovine L04972
+  
+  # Jembrana
+  create reference REF_JDV_U21603      ncbi-refseqs-bovine U21603
+
+  
+  reference REF_JDV_U21603
+
+    add feature-location whole_genome
+    feature-location whole_genome
+      add segment 1 7732
+      exit
+
+    add feature-location 5LTR
+    feature-location 5LTR
+      add segment 1 108
+      exit
+         
+    add feature-location gag
+    feature-location gag
+      add segment 230 1540
+      exit
+
+    add feature-location pro-pol
+    feature-location pro-pol
+      add segment 1321 4527
+      exit
+
+    add feature-location pro
+    feature-location pro
+      add segment 1321 1854
+      exit
+ 
+    add feature-location pol
+    feature-location pol
+      add segment 1855 4527
+      exit
+          
+    add feature-location env
+    feature-location env
+      add segment 5197 7542
+      exit
+           
+    add feature-location vif
+    feature-location vif
+      add segment 4386 4979
+      exit
+           
+    add feature-location tat
+    feature-location tat
+      add segment 5010 5303
+      exit
+           
+    add feature-location rev
+    feature-location rev
+      add segment 5197 5335 --spliceIndex 1
+      add segment 7033 7535 --spliceIndex 2
+      exit
+           
+    add feature-location tmx
+    feature-location tmx
+      add segment 7048 7542
+      exit
+
+    add feature-location 3LTR
+    feature-location 3LTR
+      add segment 7625 7732
+      exit
+         
+
+  exit 
+
+
+
+
+

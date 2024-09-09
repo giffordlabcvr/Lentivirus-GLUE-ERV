@@ -1,0 +1,36 @@
+
+  project lentivirus
+
+	#~#  Build the project extension with 'curated' sequences
+
+	# Create lentivirus project extension-specific modules 
+	run file glue/build/core/projectSettings.glue
+	run file glue/build/core/lentiModules.glue  
+
+	# Define features 
+	run file glue/build/core/lentiFeatures.glue
+
+	# Import reference sequences from GenBank XML files 
+    import source sources/virus/core/ncbi-refseqs-core/
+    
+	# Import side data for reference sequences
+	run file glue/build/core/lentiImportSideDataReferences.glue
+ 
+	# Create lentivirus references
+	run file glue/build/core/lentiMasterReferences.glue  
+	
+	# Import alignments
+	run file glue/build/core/lentiAlignments.glue
+
+	# Define constrained alignment tree
+	run file glue/build/core/lentiAlignmentTree.glue
+
+	# Inherit feature locations
+	run file glue/build/core/lentiInheritFeatureLocations.glue  
+
+	# Record feature coverage in alignments
+	run file glue/build/core/lentiRecordFeaturePresence.glue
+
+	validate
+	exit
+

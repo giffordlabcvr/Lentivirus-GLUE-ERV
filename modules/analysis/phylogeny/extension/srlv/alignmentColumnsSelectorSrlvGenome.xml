@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<alignmentColumnsSelector>
+
+    <relRefName>REF_SRLV_A</relRefName>
+    
+    <nucleotideRegionSelector>
+        <featureName>whole_genome</featureName>
+        <startNt>433</startNt>
+        <endNt>3777</endNt>
+    </nucleotideRegionSelector>
+  
+    <nucleotideRegionSelector>
+        <featureName>whole_genome</featureName>
+        <startNt>4163</startNt>
+        <endNt>8861</endNt>
+    </nucleotideRegionSelector>
+
+</alignmentColumnsSelector>
+

@@ -1,0 +1,12 @@
+
+  # Clean up any previous - delete modules
+  delete module ncbiImporterRefseqsBovine
+  
+  # Create modules
+  create module -f modules/build/extension/bovine/ncbiImporterRefseqsBovine.xml
+
+  # Download NCBI sequences 
+  module ncbiImporterRefseqsBovine import
+
+  # Export sources
+  export source ncbi-refseqs-bovine

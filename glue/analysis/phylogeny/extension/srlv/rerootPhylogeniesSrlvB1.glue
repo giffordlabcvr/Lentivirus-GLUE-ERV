@@ -1,0 +1,35 @@
+  # Re-root phylogeny 
+  module lentiPhyloUtility 
+
+	reroot-phylogeny \
+      --inputFile trees/tip/srlv-b/lenti-srlv-b1-gag.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/tip/srlv-b/lenti-srlv-b1-gag.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/tip/srlv-b/lenti-srlv-b1-rt.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/tip/srlv-b/lenti-srlv-b1-rt.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/tip/srlv-b/lenti-srlv-b1-pol.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/tip/srlv-b/lenti-srlv-b1-pol.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/tip/srlv-b/lenti-srlv-b1-in.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/tip/srlv-b/lenti-srlv-b1-in.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/tip/srlv-b/lenti-srlv-b1-env.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/tip/srlv-b/lenti-srlv-b1-env.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/tip/srlv-b/lenti-srlv-b1-genome.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/tip/srlv-b/lenti-srlv-b1-genome.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+    exit
+

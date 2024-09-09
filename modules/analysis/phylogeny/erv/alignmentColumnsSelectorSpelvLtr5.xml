@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<alignmentColumnsSelector>
+
+    <relRefName>REF_SpELV</relRefName>
+    
+    <nucleotideRegionSelector>
+        <featureName>5LTR</featureName>
+        <startNt>1</startNt>
+        <endNt>481</endNt>
+    </nucleotideRegionSelector>
+    
+</alignmentColumnsSelector>

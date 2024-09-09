@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<alignmentColumnsSelector>
+
+    <relRefName>REF_FIV</relRefName>
+    
+    <aminoAcidRegionSelector>
+        <featureName>pol</featureName>
+        <startCodon>1</startCodon>
+        <endCodon>981</endCodon>
+    </aminoAcidRegionSelector>
+    
+    <nucleotideRegionSelector>
+        <featureName>pol</featureName>
+        <startNt>2301</startNt>
+        <endNt>5243</endNt>
+    </nucleotideRegionSelector>
+    
+</alignmentColumnsSelector>

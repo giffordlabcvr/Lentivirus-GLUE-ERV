@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<alignmentColumnsSelector>
+
+    <relRefName>REF_BIV</relRefName>
+    
+    <aminoAcidRegionSelector>
+        <featureName>gag</featureName>
+        <startCodon>1</startCodon>
+        <endCodon>477</endCodon>
+    </aminoAcidRegionSelector>
+    
+    <nucleotideRegionSelector>
+        <featureName>gag</featureName>
+        <startNt>361</startNt>
+        <endNt>1746</endNt>
+    </nucleotideRegionSelector>
+    
+</alignmentColumnsSelector>

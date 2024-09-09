@@ -1,0 +1,13 @@
+delete module lentiNcbiImporterCoreReferences
+delete module lentiNcbiImporterExtendedReferences
+
+create module -f modules/core/lentiNcbiImporterCoreReferences.xml lentiNcbiImporterCoreReferences
+create module -f modules/core/lentiNcbiImporterExtendedReferences.xml lentiNcbiImporterExtendedReferences
+
+# Download NCBI sequences 
+module lentiNcbiImporterCoreReferences import
+module lentiNcbiImporterExtendedReferences import
+
+export source ncbi-refseqs-core
+export source ncbi-refseqs-extended
+

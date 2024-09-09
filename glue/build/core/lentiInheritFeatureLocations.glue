@@ -1,0 +1,39 @@
+reference REF_BIV
+
+  inherit feature-location AL_ROOT matrix
+  inherit feature-location AL_ROOT capsid
+  inherit feature-location AL_ROOT nucleocapsid
+  inherit feature-location AL_ROOT RT
+  inherit feature-location AL_ROOT IN
+
+  exit
+
+reference REF_FIV
+
+  inherit feature-location AL_ROOT matrix
+  inherit feature-location AL_ROOT capsid
+  inherit feature-location AL_ROOT nucleocapsid
+  inherit feature-location AL_ROOT RT
+  inherit feature-location AL_ROOT IN
+
+  exit
+
+reference REF_SRLV_A
+
+  inherit feature-location AL_ROOT matrix
+  inherit feature-location AL_ROOT capsid
+  inherit feature-location AL_ROOT nucleocapsid
+  inherit feature-location AL_ROOT RT
+  inherit feature-location AL_ROOT IN
+
+  exit
+
+reference REF_EIAV_Am
+
+  inherit feature-location AL_ROOT matrix
+  inherit feature-location AL_ROOT capsid
+  inherit feature-location AL_ROOT nucleocapsid
+  inherit feature-location AL_ROOT RT
+  inherit feature-location AL_ROOT IN
+
+  exit

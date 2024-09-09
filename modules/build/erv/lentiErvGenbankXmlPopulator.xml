@@ -1,0 +1,29 @@
+<genbankXmlPopulator>
+
+	<gbOrganism>
+		<propertyPopulator property="name"/>
+	</gbOrganism>
+
+	<gbLength>
+		<propertyPopulator property="length"/>
+	</gbLength>
+
+	<gbReference>
+		<gbRefPubmed>
+			<propertyPopulator property="pubmed_id"/>
+		</gbRefPubmed>
+	</gbReference>
+		
+	<gbFeature key="source">
+
+		<gbQualifier name="organism">
+		
+			<propertyPopulator property="locus_data.host_sci_name">
+
+			
+			</propertyPopulator>
+		</gbQualifier>
+
+		
+	</gbFeature>
+</genbankXmlPopulator>

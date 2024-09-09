@@ -1,0 +1,41 @@
+
+  # Clean up from any previous run of this file   
+  delete module raxmlPhylogenyGenerator
+  delete module lentiPhyloUtility
+  delete module lentiErvFigTreeAnnotationExporter 
+  delete module alignmentColumnsSelectorSpelvLtr5
+
+  # Create all the modules we need
+  create module -t raxmlPhylogenyGenerator
+  create module -f modules/core/lentiPhyloUtility.xml
+  create module -f modules/erv/lentiErvFigTreeAnnotationExporter.xml
+  create module -f modules/erv/alignmentColumnsSelectorSpelvLtr5.xml
+
+  
+  # Create the phylogenies
+  module raxmlPhylogenyGenerator
+
+    generate nucleotide phylogeny AL_SPELV -s alignmentColumnsSelectorSpelvLtr5 \
+       -w "fLocNotes.featureLoc.feature.name = '5LTR' and fLocNotes.ref_nt_coverage_pct >= 50" \
+       -o trees/erv-lineage/spelv-ltr.tre NEWICK_BOOTSTRAPS
+    exit
+
+
+  # Re-root phylogeny 
+  module LentiPhyloUtility 
+  
+	reroot-phylogeny \
+      --inputFile trees/erv-lineage/spelv-ltr.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/erv-lineage/spelv-ltr.MidpointRerooted.tree NEWICK_BOOTSTRAPS
+    exit
+
+
+  # Export annotations
+  module lentiErvFigTreeAnnotationExporter 
+
+    export figtree-annotation AL_SPELV -w "fLocNotes.featureLoc.feature.name = '5LTR'  \
+       and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/erv-lineage/spelv-ltr.figtree-annotations.tsv
+      
+  exit
+

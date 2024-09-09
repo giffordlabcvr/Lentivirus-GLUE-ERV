@@ -1,0 +1,61 @@
+<!-- Lentivirus main group references -->
+<ncbiImporter>
+
+  <sourceName>ncbi-refseqs-extended</sourceName>
+  <giNumberFieldName>gb_gi_number</giNumberFieldName>
+  
+  <specificPrimaryAccessions>
+
+
+	<!-- Bovine group -->	
+	<primaryAccession>U21603</primaryAccession>
+
+
+	<!-- Smmall ruminant lentivirus group -->		
+	<primaryAccession>NC_001463</primaryAccession>
+	<primaryAccession>GQ381130</primaryAccession>
+	<primaryAccession>EU293537</primaryAccession>
+	<primaryAccession>AF322109</primaryAccession>
+	<primaryAccession>JF502416</primaryAccession>	
+
+
+	<!-- Equine group -->		
+	<primaryAccession>JX480632</primaryAccession>
+	<primaryAccession>AF327877</primaryAccession>
+	
+	
+	<!-- Feline group -->
+	<primaryAccession>EF455613</primaryAccession>
+	<primaryAccession>U56928</primaryAccession>
+
+
+	<!-- Primate group - SIV-cpz-gor-human -->	
+	<primaryAccession>HM803689</primaryAccession>
+	<primaryAccession>M27470</primaryAccession>
+	<primaryAccession>L06042</primaryAccession>
+	<primaryAccession>AJ580407</primaryAccession>
+	<primaryAccession>AF468659</primaryAccession>
+	<primaryAccession>X14307</primaryAccession>
+	<primaryAccession>MK686247</primaryAccession>
+	<primaryAccession>AF131870</primaryAccession>
+	<primaryAccession>AF301156</primaryAccession>
+	<primaryAccession>U04005</primaryAccession>
+	<primaryAccession>AY159321</primaryAccession>
+	<primaryAccession>AF188116</primaryAccession>
+	<primaryAccession>HQ179987</primaryAccession>
+	<primaryAccession>FJ424871</primaryAccession>
+	<primaryAccession>L20571</primaryAccession>
+	<primaryAccession>DQ017382</primaryAccession>
+	<primaryAccession>X52154</primaryAccession>
+	<primaryAccession>AF103818</primaryAccession>
+	<primaryAccession>JN091691</primaryAccession>
+	<primaryAccession>AY618998</primaryAccession>
+	<primaryAccession>KP861923</primaryAccession>
+
+	
+  </specificPrimaryAccessions>
+  
+  <sequenceFormat>GENBANK_XML</sequenceFormat>
+  <sequenceIdField>PRIMARY_ACCESSION</sequenceIdField>
+  
+</ncbiImporter>

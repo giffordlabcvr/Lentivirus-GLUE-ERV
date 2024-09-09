@@ -1,0 +1,60 @@
+<!-- SRLV reference sequences -->
+<ncbiImporter>
+
+  <sourceName>ncbi-refseqs-srlv</sourceName>
+  <giNumberFieldName>gb_gi_number</giNumberFieldName>
+  <specificPrimaryAccessions>
+
+
+	 <!-- SRLV-A2 -->
+	 <primaryAccession>HQ848062</primaryAccession>
+
+	 <!-- SRLV-A3 -->
+	 <primaryAccession>AY454189</primaryAccession>
+
+	 <!-- SRLV-A4 -->
+	 <primaryAccession>AY445885</primaryAccession>
+
+	 <!-- SRLV-A5 -->
+	 <primaryAccession>AY454175</primaryAccession>
+
+	 <!-- SRLV-A6 -->
+	 <primaryAccession>U35676</primaryAccession>
+
+	 <!-- SRLV-A6 -->
+	 <primaryAccession>U35676</primaryAccession>
+
+	 <!-- SRLV-A7 -->
+	 <primaryAccession>AY454208</primaryAccession>
+
+	 <!-- SRLV-A8 -->
+	 <primaryAccession>EU010125</primaryAccession>	 
+
+	 <!-- SRLV-A9 -->
+	 <primaryAccession>FR828809</primaryAccession>	 
+
+	 <!-- SRLV-A11 -->
+	 <primaryAccession>FR693812</primaryAccession>	 
+
+	 <!-- SRLV-A12 -->
+	 <primaryAccession>FJ623122</primaryAccession>	 
+
+	 <!-- SRLV-A13 -->
+	 <primaryAccession>FJ623120</primaryAccession>	 
+
+	 <!-- SRLV-A14 -->
+	 <primaryAccession>JX469607</primaryAccession>	 
+
+	 <!-- SRLV-A15 -->
+	 <primaryAccession>JQ611029</primaryAccession>	 
+
+	 <!-- SRLV-D -->
+	 <primaryAccession>DQ632733</primaryAccession>
+
+
+  </specificPrimaryAccessions>
+  <sequenceFormat>GENBANK_XML</sequenceFormat>
+  <sequenceIdField>PRIMARY_ACCESSION</sequenceIdField>
+  
+</ncbiImporter>
+

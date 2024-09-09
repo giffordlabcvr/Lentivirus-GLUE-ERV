@@ -1,0 +1,9 @@
+
+  # Populate fields using GenBank file data
+  module lentiGenbankXmlPopulator populate
+
+  # Load sequence-associated data
+  run script glue/build/core/lentiLoadRefseqsIsolateData1.js
+  run script glue/build/core/lentiLoadRefseqsIsolateData2.js
+
+ 

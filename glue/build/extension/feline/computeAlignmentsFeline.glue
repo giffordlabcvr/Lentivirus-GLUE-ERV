@@ -1,0 +1,15 @@
+  # Clean up
+  delete module compoundAlignerFeline
+  delete module fastaAlignmentExporter
+
+  # Create modules
+  create module -f modules/build/extension/feline/compoundAlignerFeline.xml
+  create module -t fastaAlignmentExporter
+
+  # Compute alignments
+  alignment AL_Feline add member -w "source.name = 'ncbi-refseqs-feline'"
+  compute alignment AL_Feline compoundAlignerFeline
+  
+  # Export alignment
+  module fastaAlignmentExporter export AL_Feline -a -o AL_Feline.fas
+   

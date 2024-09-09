@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<alignmentColumnsSelector>
+
+    <relRefName>REF_RELIK</relRefName>
+    
+    <aminoAcidRegionSelector>
+        <featureName>pol</featureName>
+        <startCodon>1</startCodon>
+        <endCodon>959</endCodon>
+    </aminoAcidRegionSelector>
+    
+    <nucleotideRegionSelector>
+        <featureName>pol</featureName>
+        <startNt>2336</startNt>
+        <endNt>5210</endNt>
+    </nucleotideRegionSelector>
+    
+</alignmentColumnsSelector>

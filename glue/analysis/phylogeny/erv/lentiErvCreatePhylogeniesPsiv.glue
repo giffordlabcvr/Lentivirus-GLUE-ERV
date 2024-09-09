@@ -1,0 +1,89 @@
+  # Clean up from any previous run of this file   
+  delete module raxmlPhylogenyGenerator
+  delete module lentiPhyloUtility
+  delete module lentiErvFigTreeAnnotationExporter 
+  delete module alignmentColumnsSelectorPsivGag
+  delete module alignmentColumnsSelectorPsivPol
+  delete module alignmentColumnsSelectorPsivEnv
+  delete module alignmentColumnsSelectorPsivLtr5
+
+  # Create all the modules we need
+  create module -t raxmlPhylogenyGenerator
+  create module -f modules/core/lentiPhyloUtility.xml
+  create module -f modules/erv/lentiErvFigTreeAnnotationExporter.xml
+  create module -f modules/erv/alignmentColumnsSelectorPsivGag.xml
+  create module -f modules/erv/alignmentColumnsSelectorPsivPol.xml
+  create module -f modules/erv/alignmentColumnsSelectorPsivEnv.xml
+  create module -f modules/erv/alignmentColumnsSelectorPsivLtr5.xml
+
+  
+  # Create the phylogenies
+  module raxmlPhylogenyGenerator
+
+
+    generate nucleotide phylogeny AL_PSIV -s alignmentColumnsSelectorPsivLtr5 \
+       -w "fLocNotes.featureLoc.feature.name = '5LTR' and fLocNotes.ref_nt_coverage_pct >= 50" \
+       -o trees/erv-lineage/psiv-ltr.tre NEWICK_BOOTSTRAPS
+
+    generate nucleotide phylogeny AL_PSIV -s alignmentColumnsSelectorPsivGag \
+      -w "fLocNotes.featureLoc.feature.name = 'gag' and fLocNotes.ref_nt_coverage_pct >= 30" \
+      -o trees/erv-lineage/psiv-gag.tre NEWICK_BOOTSTRAPS
+
+    generate nucleotide phylogeny AL_PSIV -s alignmentColumnsSelectorPsivPol \
+      -w "fLocNotes.featureLoc.feature.name = 'pol' and fLocNotes.ref_nt_coverage_pct >= 30" \
+      -o trees/erv-lineage/psiv-pol.tre NEWICK_BOOTSTRAPS
+
+    #generate nucleotide phylogeny AL_PSIV -s alignmentColumnsSelectorPsivEnv \
+    #  -w "fLocNotes.featureLoc.feature.name = 'env' and fLocNotes.ref_nt_coverage_pct >= 30" \
+    #  -o trees/erv-lineage/psiv-env.tre NEWICK_BOOTSTRAPS
+
+
+    exit
+
+
+  # Re-root phylogeny 
+  module LentiPhyloUtility 
+
+	reroot-phylogeny \
+      --inputFile trees/erv-lineage/psiv-ltr.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/erv-lineage/psiv-ltr.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/erv-lineage/psiv-gag.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/erv-lineage/psiv-gag.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/erv-lineage/psiv-pol.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/erv-lineage/psiv-pol.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	#reroot-phylogeny \
+    #  --inputFile trees/erv-lineage/psiv-env.tre NEWICK_BOOTSTRAPS \
+    #  --midpoint \
+    #  --outputFile trees/erv-lineage/psiv-env.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+
+    exit
+
+
+  # Export annotations
+  module lentiErvFigTreeAnnotationExporter 
+
+
+    export figtree-annotation AL_PSIV -w "fLocNotes.featureLoc.feature.name = '5LTR'  \
+      and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/erv-lineage/psiv-ltr.figtree-annotations.tsv
+
+    export figtree-annotation AL_PSIV -w "fLocNotes.featureLoc.feature.name = 'gag'  \
+      and fLocNotes.ref_nt_coverage_pct >= 30" -f trees/erv-lineage/psiv-gag.figtree-annotations.tsv
+
+    export figtree-annotation AL_PSIV -w "fLocNotes.featureLoc.feature.name = 'pol'  \
+      and fLocNotes.ref_nt_coverage_pct >= 30" -f trees/erv-lineage/psiv-pol.figtree-annotations.tsv
+
+    #export figtree-annotation AL_PSIV -w "fLocNotes.featureLoc.feature.name = 'env'  \
+    #  and fLocNotes.ref_nt_coverage_pct >= 30" -f trees/erv-lineage/psiv-pol.figtree-annotations.tsv
+
+
+  exit
+

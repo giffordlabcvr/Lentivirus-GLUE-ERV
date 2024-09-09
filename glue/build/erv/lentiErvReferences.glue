@@ -1,0 +1,734 @@
+  ## Endogenous lentivirus reference sequence declarations
+  
+  create reference REF_RELIK fasta-refseqs-erv RELIK-con
+  create reference REF_PSIV1 fasta-refseqs-erv PSIV1-con
+  create reference REF_PSIV2 fasta-refseqs-erv PSIV2-con
+  create reference REF_MELV  fasta-refseqs-erv MELV-con
+  create reference REF_DELV  fasta-refseqs-erv DELV-con
+  create reference REF_SpELV fasta-refseqs-erv SpELV-con
+
+  ## Endogenous lentivirus feature annotations
+
+  reference REF_RELIK
+
+	add feature-location whole_genome
+	feature-location whole_genome
+	  add segment 1	8867
+	  exit
+  
+	add feature-location 5LTR
+	feature-location 5LTR
+	  add segment 1	496
+	  exit
+  
+	add feature-location TATA_box
+	feature-location TATA_box
+	  add segment 247 254
+	  exit
+  
+	add feature-location TAR
+	feature-location TAR
+	  add segment 278 385
+	  exit
+
+	add feature-location PBS
+	feature-location PBS
+	  add segment 499 518
+	  exit
+  
+	add feature-location gag
+	feature-location gag
+	  add segment 597 2030
+	  exit
+  
+	add feature-location matrix
+	feature-location matrix
+	  add segment 597 1025
+	  exit
+  
+	add feature-location capsid
+	feature-location capsid
+	  add segment 1026 1748
+	  exit
+  
+	add feature-location nucleocapsid
+	feature-location nucleocapsid
+	  add segment 1749 2030
+	  exit
+  
+    add feature-location gag-pol
+    feature-location gag-pol
+      add segment 597 1880 --spliceIndex 1
+      add segment 1881 1885 --translationModifier lentiGagPolTranslationModifier --spliceIndex 2
+      add segment 1886 5212 --spliceIndex 3
+      exit
+     
+    add feature-location FS
+    feature-location FS  
+      add segment 1880 1912
+      exit
+    
+    add feature-location FS-slippery-seq
+    feature-location FS-slippery-seq  
+      add segment 1880 1886
+      exit
+
+    add feature-location FS-stemloop
+    feature-location FS-stemloop  
+      add segment 1887 1912
+      exit
+      
+	add feature-location pro-pol
+	feature-location pro-pol
+	  add segment 1880 5212
+	  exit
+
+	add feature-location pro
+	feature-location pro
+	  add segment 1880 2335
+	  exit
+
+	add feature-location pol
+	feature-location pol
+	  add segment 2336 5212
+	  exit
+
+	add feature-location RT
+	feature-location RT
+	  add segment 2336 3631
+	  exit
+
+	add feature-location RNaseH
+	feature-location RNaseH
+	  add segment 3632 4018
+	  exit
+
+	add feature-location dUTPase
+	feature-location dUTPase
+	  add segment 4019 4387
+	  exit
+
+	add feature-location IN
+	feature-location IN
+	  add segment 4388 5212
+	  exit
+  
+	add feature-location vif
+	feature-location vif
+	  add segment 5215 5469
+	  exit
+  
+	add feature-location tat
+	feature-location tat
+	  add segment 5597 5821
+	  exit
+  	  
+ 	add feature-location env
+	feature-location env
+	  add segment 5732 8341
+	  exit
+
+	add feature-location SP
+	feature-location SP
+	  add segment 5732 5941
+	  exit
+	    
+ 	add feature-location surface
+	feature-location surface
+	  add segment 5732 7537
+	  exit
+	  
+ 	add feature-location transmembrane
+	feature-location transmembrane
+	  add segment 7538 8341
+	  exit
+	  
+	add feature-location RRE
+	feature-location RRE
+	  add segment 7459 7750
+	  exit
+
+	add feature-location rev
+	feature-location rev
+	  add segment 8143 8376
+	  exit
+ 	  
+	add feature-location PPT
+	feature-location PPT
+	  add segment 8350 8371
+	  exit
+ 
+	add feature-location 3LTR
+	feature-location 3LTR
+	  add segment 8371 8867
+	  exit
+    
+	exit 
+
+
+  reference REF_PSIV1
+
+	add feature-location whole_genome
+	feature-location whole_genome
+	  add segment 1 7380
+	  exit
+  
+	add feature-location 5LTR
+	feature-location 5LTR
+	  add segment 1 424
+	  exit
+
+	add feature-location TATA_box
+	feature-location TATA_box
+	  add segment 251 257
+	  exit
+
+	add feature-location TAR
+	feature-location TAR
+	  add segment 280 396
+	  exit
+
+	add feature-location PBS
+	feature-location PBS
+	  add segment 427 444
+	  exit
+
+	add feature-location gag
+	feature-location gag
+	  add segment 492 1544
+	  exit
+  
+	add feature-location matrix
+	feature-location matrix
+	  add segment 492 869
+	  exit
+  
+	add feature-location capsid
+	feature-location capsid
+	  add segment 870 1451
+	  exit
+  
+	add feature-location nucleocapsid
+	feature-location nucleocapsid
+	  add segment 1452 1544
+	  exit
+  
+    add feature-location gag-pol
+    feature-location gag-pol
+      add segment 492 1454 --spliceIndex 1
+      add segment 1455 1459 --translationModifier lentiGagPolTranslationModifier --spliceIndex 2
+      add segment 1460 4711 --spliceIndex 3
+      exit
+
+	add feature-location pro-pol
+	feature-location pro-pol
+	  add segment 1454 4711
+	  exit
+
+	add feature-location pol
+	feature-location pol
+	  add segment 1844 4711
+	  exit
+
+	add feature-location pro
+	feature-location pro
+	  add segment 1454 1843
+	  exit
+
+	add feature-location RT
+	feature-location RT
+	  add segment 1844 3157
+	  exit
+
+	add feature-location RNaseH
+	feature-location RNaseH
+	  add segment 3158 3511
+	  exit
+
+	add feature-location dUTPase
+	feature-location dUTPase
+	  add segment 3512 3904
+	  exit
+
+	add feature-location IN
+	feature-location IN
+	  add segment 3905 4711
+	  exit
+
+	add feature-location vif
+	feature-location vif
+	  add segment 4720 5016
+	  exit
+  
+	add feature-location tat
+	feature-location tat
+	  add segment 4947 5165
+	  exit
+  	  
+	add feature-location env
+	feature-location env
+	  add segment 5279 6976
+	  exit
+
+	add feature-location orfx
+	feature-location orfx
+	  add segment 7000 7272
+	  exit
+
+	add feature-location 3LTR
+	feature-location 3LTR
+	  add segment 6999 7380
+	  exit
+    
+	exit 
+
+  reference REF_PSIV2
+
+	add feature-location whole_genome
+	feature-location whole_genome
+	  add segment 1	8102
+	  exit
+  
+  	add feature-location 5LTR
+	feature-location 5LTR
+	  add segment 1	404
+	  exit
+
+	add feature-location PBS
+	feature-location PBS
+	  add segment 407 424
+	  exit
+
+	add feature-location gag
+	feature-location gag
+	  add segment 473 1795
+	  exit
+  
+	add feature-location matrix
+	feature-location matrix
+	  add segment 473 844
+	  exit
+  
+	add feature-location capsid
+	feature-location capsid
+	  add segment 845 1504
+	  exit
+  
+	add feature-location nucleocapsid
+	feature-location nucleocapsid
+	  add segment 1505 1795
+	  exit
+  
+    add feature-location gag-pol
+    feature-location gag-pol
+      add segment 473 1672 --spliceIndex 1
+      add segment 1673 1677 --translationModifier lentiGagPolTranslationModifier --spliceIndex 2
+      add segment 1678 4977 --spliceIndex 3
+      exit
+     
+    add feature-location FS
+    feature-location FS  
+      add segment 1669 1772
+      exit
+    
+    add feature-location FS-slippery-seq
+    feature-location FS-slippery-seq  
+      add segment 1669 1675
+      exit
+
+    add feature-location FS-stemloop
+    feature-location FS-stemloop  
+      add segment 1681 1772
+      exit
+
+	add feature-location pro-pol
+	feature-location pro-pol
+	  add segment 1795 4977
+	  exit
+
+	add feature-location pro
+	feature-location pro
+	  add segment 1795 2091
+	  exit
+
+	add feature-location pol
+	feature-location pol
+	  add segment 2092 4977
+	  exit
+
+	add feature-location RT
+	feature-location RT
+	  add segment 2092 3402
+	  exit
+
+	add feature-location RNaseH
+	feature-location RNaseH
+	  add segment 3403 3756
+	  exit
+
+	add feature-location dUTPase
+	feature-location dUTPase
+	  add segment 3757 4149
+	  exit
+
+	add feature-location IN
+	feature-location IN
+	  add segment 4150 4977
+	  exit
+
+	add feature-location vif
+	feature-location vif
+	  add segment 4970 5569
+	  exit
+
+	add feature-location env
+	feature-location env
+	  add segment 5727 7646
+	  exit
+	  
+ 	add feature-location surface
+	feature-location surface
+	  add segment 5727 7013
+	  exit
+	  
+ 	add feature-location transmembrane
+	feature-location transmembrane
+	  add segment 7014 7646
+	  exit
+
+	add feature-location orfx
+	feature-location orfx
+	  add segment 7606 7950
+	  exit
+  
+	add feature-location PPT
+	feature-location PPT
+	  add segment 7659 7675
+	  exit
+ 
+	add feature-location 3LTR
+	feature-location 3LTR
+	  add segment 7681 8102
+	  exit
+    
+
+	exit 
+
+
+  reference REF_MELV
+
+	add feature-location whole_genome
+	feature-location whole_genome
+	  add segment 1	9113
+	  exit
+  
+	add feature-location 5LTR
+	feature-location 5LTR
+	  add segment 1	584
+	  exit
+
+	add feature-location PBS
+	feature-location PBS
+	  add segment 587 606
+	  exit
+
+	add feature-location TATA_box
+	feature-location TATA_box
+	  add segment 239 245
+	  exit
+
+	add feature-location TAR
+	feature-location TAR
+	  add segment 281 442
+	  exit
+
+	add feature-location gag
+	feature-location gag
+	  add segment 724 2097
+	  exit
+  
+    add feature-location gag-pol
+    feature-location gag-pol
+      add segment 724 2070 --spliceIndex 1
+      add segment 2071 2075 --translationModifier lentiGagPolTranslationModifier --spliceIndex 2
+      add segment 2076 5261 --spliceIndex 3
+      exit
+     
+    add feature-location FS
+    feature-location FS  
+      add segment 2065 2169
+      exit
+    
+    add feature-location FS-slippery-seq
+    feature-location FS-slippery-seq  
+      add segment 2065 2071
+      exit
+
+    add feature-location FS-stemloop
+    feature-location FS-stemloop  
+      add segment 2084 2169
+      exit
+
+	add feature-location pro-pol
+	feature-location pro-pol
+	  add segment 1944 5261
+	  exit
+
+	add feature-location pro
+	feature-location pro
+	  add segment 1944 2468
+	  exit
+
+	add feature-location pol
+	feature-location pol
+	  add segment 2469 5261
+	  exit
+
+	add feature-location vif
+	feature-location vif
+	  add segment 5401 5850
+	  exit
+
+	add feature-location env
+	feature-location env
+	  add segment 6083 8665
+	  exit
+
+	add feature-location SP
+	feature-location SP
+	  add segment 6083 6310
+	  exit
+	  
+	add feature-location RRE
+	feature-location RRE
+	  add segment 8041 8281
+	  exit
+
+	add feature-location 3LTR
+	feature-location 3LTR
+	  add segment 8873 9113
+	  exit
+    
+	exit 
+
+
+
+  reference REF_DELV
+
+	add feature-location whole_genome
+	feature-location whole_genome
+	  add segment 1	10002
+	  exit
+  
+	add feature-location 5LTR
+	feature-location 5LTR
+	  add segment 1	437
+	  exit
+
+	add feature-location TAR
+	feature-location TAR
+	  add segment 322 437
+	  exit
+
+	add feature-location PBS
+	feature-location PBS
+	  add segment 442 459
+	  exit
+
+	add feature-location gag
+	feature-location gag
+	  add segment 557 1966
+	  exit
+  
+	add feature-location matrix
+	feature-location matrix
+	  add segment 557 1021
+	  exit
+  
+	add feature-location capsid
+	feature-location capsid
+	  add segment 1022 1618
+	  exit
+  
+	add feature-location nucleocapsid
+	feature-location nucleocapsid
+	  add segment 1619 1834
+	  exit
+  
+    add feature-location gag-pol
+    feature-location gag-pol
+      add segment 557 1834 --spliceIndex 1
+      add segment 1835 1839 --translationModifier lentiGagPolTranslationModifier --spliceIndex 2
+      add segment 1840 5172 --spliceIndex 3
+      exit
+     
+    add feature-location FS
+    feature-location FS  
+      add segment 1831 1893
+      exit
+    
+    add feature-location FS-slippery-seq
+    feature-location FS-slippery-seq  
+      add segment 1831 1837
+      exit
+
+    add feature-location FS-stemloop
+    feature-location FS-stemloop  
+      add segment 1867 1893
+      exit
+
+	add feature-location pro-pol
+	feature-location pro-pol
+	  add segment 1783 5172
+	  exit
+
+	add feature-location pro
+	feature-location pro
+	  add segment 1783 2259
+	  exit
+
+	add feature-location pol
+	feature-location pol
+	  add segment 2260 5172
+	  exit
+
+	add feature-location RT
+	feature-location RT
+	  add segment 2260 3576
+	  exit
+
+	add feature-location RNaseH
+	feature-location RNaseH
+	  add segment 3577 3921
+	  exit
+
+	add feature-location dUTPase
+	feature-location dUTPase
+	  add segment 3922 4320
+	  exit
+
+	add feature-location IN
+	feature-location IN
+	  add segment 4321 5172
+	  exit
+  
+	add feature-location vif
+	feature-location vif
+	  add segment 5162 5980
+	  exit
+
+	add feature-location tat
+	feature-location tat
+	  add segment 5998 6309
+	  exit
+
+	add feature-location env
+	feature-location env
+	  add segment 6425 9277
+	  exit
+	  
+ 	add feature-location surface
+	feature-location surface
+	  add segment 6425 8566
+	  exit
+	  
+ 	add feature-location transmembrane
+	feature-location transmembrane
+	  add segment 8567 9277
+	  exit
+ 	  
+	add feature-location PPT
+	feature-location PPT
+	  add segment 9547 9560
+	  exit
+ 
+	add feature-location 3LTR
+	feature-location 3LTR
+	  add segment 9566 10002
+	  exit
+    
+	exit 
+
+
+  reference REF_SpELV
+
+	add feature-location whole_genome
+	feature-location whole_genome
+	  add segment 1	4110
+	  exit
+  
+	add feature-location 5LTR
+	feature-location 5LTR
+	  add segment 1	481
+	  exit
+
+	add feature-location TAR
+	feature-location TAR
+	  add segment 196 268
+	  exit
+
+	add feature-location PBS
+	feature-location PBS
+	  add segment 506 523
+	  exit
+ 
+ 	add feature-location gag
+	feature-location gag
+	  add segment 713 2125
+	  exit
+  
+	add feature-location matrix
+	feature-location matrix
+	  add segment 713 1219
+	  exit
+  
+	add feature-location capsid
+	feature-location capsid
+	  add segment 1220 1786
+	  exit
+  
+	add feature-location nucleocapsid
+	feature-location nucleocapsid
+	  add segment 1787 2125
+	  exit
+
+	add feature-location pro-pol
+	feature-location pro-pol
+	  add segment 2092 4110
+	  exit
+  
+    add feature-location gag-pol
+    feature-location gag-pol
+      add segment 713 2098 --spliceIndex 1
+      add segment 2099 2103 --translationModifier lentiGagPolTranslationModifier --spliceIndex 2
+      add segment 2104 4110 --spliceIndex 3
+      exit
+     
+
+	add feature-location pro
+	feature-location pro
+	  add segment 2092 2424
+	  exit
+
+	add feature-location pol
+	feature-location pol
+	  add segment 2425 4110
+	  exit
+
+	add feature-location RT
+	feature-location RT
+	  add segment 2425 3717
+	  exit
+
+	add feature-location RNaseH
+	feature-location RNaseH
+	  add segment 3718 4068
+	  exit
+
+	add feature-location dUTPase
+	feature-location dUTPase
+	  add segment 4069 4110
+	  exit
+
+	exit
+

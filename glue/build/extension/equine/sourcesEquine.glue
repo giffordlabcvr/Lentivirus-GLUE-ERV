@@ -1,0 +1,4 @@
+ 
+  # Import GenBank sequences 
+  import source /Users/rob/Sources/lentivirus/equine/ncbi-refseqs-equine
+  import source /Users/rob/Sources/lentivirus/equine/ncbi-nuccore-equine

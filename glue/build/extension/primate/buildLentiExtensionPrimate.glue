@@ -1,0 +1,36 @@
+  
+ project lentivirus
+
+    # Delete previous extension build
+    #run file glue/build/extension/primate/deleteExtensionBuildPrimate.glue
+
+    # Create modules
+    create module -f modules/build/extension/primate/hivCompoundAligner.xml
+    create module -f modules/build/extension/primate/hivGagPolTranslationModifier.xml
+
+    # Import sources
+    run file glue/build/extension/primate/sourcesPrimate.glue
+
+    # Define extension references
+    run file glue/build/extension/primate/referencesPrimate.glue
+
+    # Attach feature locations to the reference sequences 
+    run file glue/build/extension/primate/featureLocationsPrimate.glue
+
+    # Extract and import isolate data for extension sequences
+    run file glue/build/extension/primate/importIsolateDataPrimate.glue
+    
+    # Import alignments and create constrained alignment tree
+    #run file glue/build/extension/hivRootAlignment.glue
+
+	# Add extension set sequences constrained alignment tree
+	run file glue/build/extension/primate/alignmentTreePrimate.glue
+	
+	# Record feature presence
+	run file glue/build/extension/primate/recordFeaturePresencePrimate.glue
+
+	# Validate
+	validate
+
+	exit
+

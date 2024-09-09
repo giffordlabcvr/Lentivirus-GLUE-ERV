@@ -1,0 +1,12 @@
+<ecmaFunctionInvoker>
+
+	<scriptFileName>findAtypicalConservedSites.js</scriptFileName>
+	
+	<function>
+		<name>findAtypicalConservedSites</name>
+	
+		<tableFromObjectsResultType/>
+	</function>
+	
+</ecmaFunctionInvoker>
+	 

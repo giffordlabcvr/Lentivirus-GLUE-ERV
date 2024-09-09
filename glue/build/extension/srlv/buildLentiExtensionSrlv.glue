@@ -1,0 +1,45 @@
+  # Create DB schema
+  schema-project lentivirus
+  
+	run file glue/build/extension/srlv/srlvSchemaExtensions.glue
+	
+	exit
+
+  project lentivirus
+
+    # Delete previous extension build
+    #run file glue/build/extension/srlv/deleteExtensionBuildSrlv.glue
+
+    # Import sources
+    run file glue/build/extension/srlv/sourcesSrlv.glue
+
+    # Define extension references
+    run file glue/build/extension/srlv/ReferencesSrlv.glue
+
+    # Extract and import isolate data for extension sequences
+    run file glue/build/extension/srlv/importIsolateDataSrlv.glue
+
+	# Do BLAST genotyping
+	create module -f modules/build/extension/srlv/blastGenotyperSrlv.xml
+	run script glue/build/extension/srlv/doBlastGenotying.js
+    run script glue/build/extension/srlv/updateGenotypesFromBlastResults.js
+
+	# Import alignments
+	run file glue/build/extension/srlv/unconstrainedAlignmentsSrlv.glue	
+
+	# Add extension set sequences to constrained alignment tree
+	run file glue/build/extension/srlv/alignmentTreeSrlv.glue
+
+    # Inherit feature locations
+    #run file glue/build/extension/srlv/InheritFeatureLocationsSrlvRefs.glue
+	
+	# Compute alignments
+	run file glue/build/extension/srlv/createAlignmentsSrlv.glue
+	
+	# Record feature presence
+	run file glue/build/extension/srlv/recordFeaturePresenceSrlv.glue
+
+	# Validate
+	validate
+
+	exit

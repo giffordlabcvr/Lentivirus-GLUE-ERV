@@ -1,0 +1,195 @@
+  
+  # SRLV A0
+  create reference REF_SRLV_A_0_MW248464   ncbi-refseqs-srlv MW248464
+  create reference REF_SRLV_A_0_KT898826   ncbi-refseqs-srlv KT898826
+
+  # SRLV A1
+  create reference REF_SRLV_A1_M60610      ncbi-refseqs-srlv M60610     
+  create reference REF_SRLV_A1_M31646      ncbi-refseqs-srlv M31646
+  create reference REF_SRLV_A1_S51392      ncbi-refseqs-srlv S51392
+  create reference REF_SRLV_A1_KT898826    ncbi-refseqs-srlv KT898826
+  create reference REF_SRLV_A1_AF479638    ncbi-refseqs-srlv AF479638
+
+  # SRLV A4
+  create reference REF_SRLV_A4_HQ848062    ncbi-refseqs-srlv HQ848062
+  create reference REF_SRLV_A4_KT453988    ncbi-refseqs-srlv KT453988
+
+  # SRLV A3
+  create reference REF_SRLV_A3_MT993913    ncbi-refseqs-srlv MT993913
+  create reference REF_SRLV_A3_MT993914    ncbi-refseqs-srlv MT993914
+  create reference REF_SRLV_A3_MT993918    ncbi-refseqs-srlv MT993918
+  create reference REF_SRLV_A3_MT993900    ncbi-refseqs-srlv MT993900
+  create reference REF_SRLV_A3_MH916859    ncbi-refseqs-srlv MH916859
+
+  # SRLV A8
+  create reference REF_SRLV_A8_MG554405    ncbi-refseqs-srlv MG554405
+  create reference REF_SRLV_A8_MH374291    ncbi-refseqs-srlv MH374291
+  create reference REF_SRLV_A8_MH374284    ncbi-refseqs-srlv MH374284
+  create reference REF_SRLV_A8_MG554406    ncbi-refseqs-srlv MG554406
+
+  # SRLV A18
+  create reference REF_SRLV_A18_MH374287   ncbi-refseqs-srlv MH374287
+
+  # SRLV B1
+  create reference REF_SRLV_B1_HM210570    ncbi-refseqs-srlv HM210570
+  create reference REF_SRLV_B1_GU120138    ncbi-refseqs-srlv GU120138
+  create reference REF_SRLV_B1_FJ195346    ncbi-refseqs-srlv FJ195346
+  
+  # SRLV B2  
+  create reference REF_SRLV_B2_FJ195346    ncbi-refseqs-srlv FJ195346
+  create reference REF_SRLV_B2_MH374288    ncbi-refseqs-srlv MH374288
+
+  # SRLV B3  
+  create reference REF_SRLV_B3_JF502417    ncbi-refseqs-srlv JF502417
+  
+  # SRLV E subtypes
+  create reference REF_SRLV_E1_EU293537    ncbi-refseqs-core EU293537
+  create reference REF_SRLV_E2_GQ381130    ncbi-refseqs-core GQ381130
+
+
+
+
+
+  reference REF_SRLV_B1_HM210570
+
+    add feature-location whole_genome
+    feature-location whole_genome
+      add segment 1 9090
+      exit
+
+    add feature-location 5LTR
+    feature-location 5LTR
+      add segment 1 164
+      exit
+         
+    add feature-location gag
+    feature-location gag
+      add segment 554 1879
+      exit
+
+    add feature-location matrix
+    feature-location matrix
+      add segment 554 1009
+      exit
+ 
+    add feature-location capsid
+    feature-location capsid
+      add segment 1010 1498
+      exit
+      
+    add feature-location pro-pol
+    feature-location pro-pol
+      add segment 1759 5067
+      exit
+
+    add feature-location pro
+    feature-location pro
+      add segment 1759 2193
+      exit
+
+    add feature-location pol
+    feature-location pol
+      add segment 2194 5067
+      exit
+
+    add feature-location rt
+    feature-location rt
+      add segment 2368 3399
+      exit
+
+    add feature-location in
+    feature-location in
+      add segment 4225 5049
+      exit
+      
+ 
+    add feature-location vif
+    feature-location vif
+      add segment 5027 5716
+      exit
+ 
+    add feature-location tat
+    feature-location tat
+      add segment 5709 5972
+      exit
+          
+    add feature-location env
+    feature-location env
+      add segment 6033 8807
+      exit
+           
+    add feature-location rev
+    feature-location rev
+      add segment 6033 6144 --spliceIndex 1
+      add segment 8472 8764 --spliceIndex 2
+      exit
+
+    add feature-location 3LTR
+    feature-location 3LTR
+      add segment 8780 9090
+      exit
+
+  exit 
+
+
+
+  reference REF_SRLV_B2_FJ195346
+
+    add feature-location whole_genome
+    feature-location whole_genome
+      add segment 1 9136
+      exit
+
+    add feature-location 5LTR
+    feature-location 5LTR
+      add segment 1 162
+      exit
+         
+    add feature-location gag
+    feature-location gag
+      add segment 522 1862
+      exit
+
+    add feature-location pro-pol
+    feature-location pro-pol
+      add segment 1748 5050
+      exit
+
+    add feature-location pro
+    feature-location pro
+      add segment 1748 2176
+      exit
+
+    add feature-location pol
+    feature-location pol
+      add segment 2177 5050
+      exit
+
+    add feature-location vif
+    feature-location vif
+      add segment 5010 5699
+      exit
+ 
+    add feature-location tat
+    feature-location tat
+      add segment 5692 5955
+      exit
+          
+    add feature-location env
+    feature-location env
+      add segment 6018 8864
+      exit
+           
+    add feature-location rev
+    feature-location rev
+      add segment 6018 6129 --spliceIndex 1
+      add segment 8529 8821 --spliceIndex 2
+      exit
+
+    add feature-location 3LTR
+    feature-location 3LTR
+      add segment 8836 9136
+      exit
+
+  exit 
+

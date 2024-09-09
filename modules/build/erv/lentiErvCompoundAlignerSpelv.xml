@@ -1,0 +1,13 @@
+<compoundAligner>
+	<aligners>
+		<codonAwareBlastAligner>
+			<featureName>gag</featureName>
+		</codonAwareBlastAligner>
+		<codonAwareBlastAligner>
+			<featureName>pol</featureName>
+		</codonAwareBlastAligner>
+		<blastAligner>
+			<featureName>whole_genome</featureName>
+		</blastAligner>
+	</aligners>
+</compoundAligner>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<alignmentColumnsSelector>
+
+    <relRefName>REF_SpELV</relRefName>
+    
+    <aminoAcidRegionSelector>
+        <featureName>pol</featureName>
+        <startCodon>1</startCodon>
+        <endCodon>803</endCodon>
+    </aminoAcidRegionSelector>
+    
+    <nucleotideRegionSelector>
+        <featureName>pol</featureName>
+        <startNt>2368</startNt>
+        <endNt>5053</endNt>
+    </nucleotideRegionSelector>
+    
+</alignmentColumnsSelector>

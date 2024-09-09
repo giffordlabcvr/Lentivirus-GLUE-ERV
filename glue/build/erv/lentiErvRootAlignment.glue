@@ -1,0 +1,25 @@
+
+
+#~# Import pre-built root alignment with ERVs
+
+  module unconstrainedAlignmentImporter
+
+	import AL_UNC_ROOT_ERV -f alignments/root/lentivirus-root-gagpol-erv.aln.fna
+  
+	exit
+
+  #~# Derive constrained root alignment from unconstrained root alignment
+  
+  alignment AL_ROOT derive segments AL_UNC_ROOT_ERV -a --existingMembersOnly --mergeStrategy OVERWRITE
+
+
+  #~# Record feature presence
+  
+  delete module lentiFeaturePresenceRecorder
+  create module -f modules/build/core/lentiFeaturePresenceRecorder.xml
+  module lentiFeaturePresenceRecorder
+  
+    record feature-presence AL_ROOT --recursive -f whole_genome --descendentFeatures
+
+   exit
+

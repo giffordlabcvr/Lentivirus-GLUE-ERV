@@ -1,0 +1,76 @@
+  # Clean up from any previous run of this file
+  delete alignment fiv_All
+  delete alignment AL_UNC_fiv_Tree_gag
+  delete alignment AL_UNC_fiv_Tree_pol
+  delete alignment AL_UNC_fiv_Tree_env
+  
+  delete module fivFeaturePresenceRecorder
+  delete module fastaAlignmentExporter
+  delete module fivTreeAlignmentImporterNucs
+  delete module raxmlPhylogenyGenerator
+  delete module fivPhyloUtility
+  delete module lentiFigTreeAnnotationExporter
+  
+  
+  # Create all the modules we need
+  create module -f modules/extension/fivFeaturePresenceRecorder.xml
+  create module -f modules/extension/fastaAlignmentExporter.xml
+  create module -f modules/extension/fivTreeAlignmentImporterNucs.xml
+  create module -f modules/extension/fivPhyloUtility.xml
+  create module -f modules/extension/lentiFigTreeAnnotationExporter.xml
+  create module -t raxmlPhylogenyGenerator
+
+  # Create alignment fiv sequences
+  create alignment fiv_All -r REF_MASTER_fiv-A
+  alignment fiv_All add member -w "source.name = 'ncbi-curated-fiv' and lab_construct = null"
+  compute alignment fiv_All fivCompoundAligner
+
+
+  module fivFeaturePresenceRecorder record feature-presence fiv_All --recursive --featureName whole_genome --descendentFeatures
+  module fastaAlignmentExporter
+	export fiv_All -w "fLocNotes.featureLoc.feature.name = 'gag' and fLocNotes.ref_nt_coverage_pct >= 60" -o alignments/tree/gag.export.aln.fna
+	export fiv_All -w "fLocNotes.featureLoc.feature.name = 'pol' and fLocNotes.ref_nt_coverage_pct >= 60" -o alignments/tree/pol.export.aln.fna
+	export fiv_All -w "fLocNotes.featureLoc.feature.name = 'env' and fLocNotes.ref_nt_coverage_pct >= 60" -o alignments/tree/env.export.aln.fna
+	exit
+
+  # Import the alignments to GLUE
+  module fivTreeAlignmentImporterNucs import AL_UNC_fiv_Tree_gag -f alignments/tree/gag.export.aln.fna
+  module fivTreeAlignmentImporterNucs import AL_UNC_fiv_Tree_pol -f alignments/tree/pol.export.aln.fna
+  module fivTreeAlignmentImporterNucs import AL_UNC_fiv_Tree_env -f alignments/tree/env.export.aln.fna
+
+
+  # Create the phylogeny
+  module raxmlPhylogenyGenerator
+    generate nucleotide phylogeny AL_UNC_fiv_Tree_gag -a -o trees/root/gag.export_nucs.tre NEWICK_BOOTSTRAPS 
+    generate nucleotide phylogeny AL_UNC_fiv_Tree_pol -a -o trees/root/pol.export_nucs.tre NEWICK_BOOTSTRAPS 
+    generate nucleotide phylogeny AL_UNC_fiv_Tree_env -a -o trees/root/env.export_nucs.tre NEWICK_BOOTSTRAPS 
+    exit
+
+
+  # Re-root phylogeny 
+  module fivPhyloUtility 
+	reroot-phylogeny \
+      --inputFile trees/root/gag.export_nucs.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/root/gag.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/root/pol.export_nucs.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/root/pol.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/root/env.export_nucs.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/root/env.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAP
+    exit
+
+
+  # Export annotations
+  module lentiFigTreeAnnotationExporter 
+    export figtree-annotation AL_UNC_fiv_Tree_gag -f trees/root/gagFigtreeAnnotations.tsv
+    export figtree-annotation AL_UNC_fiv_Tree_pol -f trees/root/polFigtreeAnnotations.tsv
+    export figtree-annotation AL_UNC_fiv_Tree_env -f trees/root/envFigtreeAnnotations.tsv
+  exit
+  
+  

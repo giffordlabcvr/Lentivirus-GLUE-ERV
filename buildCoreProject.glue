@@ -1,0 +1,24 @@
+
+  # Delete previously built Lentivirus project if it exists
+  delete project lentivirus
+
+  # Create Lentivirus project
+  create project lentivirus "A GLUE project for lentiviruses" --minVersion 0.1.66
+
+  # Create DB schema
+  schema-project lentivirus
+	run file glue/build/core/lentiSchemaExtensions.glue
+	exit
+
+  # Build core project (reference sequences only)
+  run file glue/build/core/buildLentiCore.glue
+
+  # Build ERV project
+  #run file glue/build/erv/buildLentiErvExtension.glue
+  
+  # Build species-level extension projects
+  #run file glue/build/extension/bovine/buildLentiExtensionBovine.glue
+  #run file glue/build/extension/feline/buildLentiExtensionFeline.glue  
+  #run file glue/build/extension/equine/buildLentiExtensionEquine.glue  
+  run file glue/build/extension/srlv/buildLentiExtensionSrlv.glue
+  #run file glue/build/extension/primate/buildLentiExtensionPrimate.glue  

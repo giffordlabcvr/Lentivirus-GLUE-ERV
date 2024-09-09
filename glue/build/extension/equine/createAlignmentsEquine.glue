@@ -1,0 +1,8 @@
+  # Clean up
+  delete module compoundAlignerEquine
+
+  # Create modules
+  create module -f modules/build/extension/Equine/compoundAlignerEquine.xml
+
+  # Compute alignments
+  compute alignment AL_Equine compoundAlignerEquine

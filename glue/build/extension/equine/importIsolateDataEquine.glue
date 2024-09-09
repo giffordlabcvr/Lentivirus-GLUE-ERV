@@ -1,0 +1,16 @@
+    delete module genbankXmlPopulatorEquine
+    
+    create module -f modules/build/extension/equine/genbankXmlPopulatorEquine.xml
+
+	# Link extension set sequences to isolate data
+	run script glue/build/extension/equine/linkIsolateExtensionRefseqsEquine.js
+
+	# Extract data from the XML files
+	module genbankXmlPopulatorEquine populate -w "source.name like '%-equine'"
+
+	# Import metadata for exogenous reference sequences from tabular
+	#create module -f modules/build/extension/equine/sideDataImporterEquine.xml equineSideDataImporter
+	#module equineSideDataImporter 
+	#  populate -f tabular/extension/equine/equine-refseqs.tsv
+	#  populate -f tabular/extension/equine/equine-curated.tsv
+    #  exit

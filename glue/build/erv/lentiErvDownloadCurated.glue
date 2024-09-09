@@ -1,0 +1,8 @@
+delete module lentiNcbiImporterGenbankErvs
+
+create module -f modules/erv/lentiNcbiImporterGenbankErvs.xml lentiNcbiImporterGenbankErvs
+
+# Download NCBI sequences 
+module lentiNcbiImporterGenbankErvs import
+
+export source ncbi-curated-erv

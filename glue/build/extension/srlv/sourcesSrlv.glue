@@ -1,0 +1,4 @@
+ 
+  # Import GenBank sequences 
+  import source /Users/rob/Sources/lentivirus/srlv/ncbi-nuccore-srlv
+  import source /Users/rob/Sources/lentivirus/srlv/ncbi-refseqs-srlv

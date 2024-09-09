@@ -1,0 +1,9 @@
+  # Clean up
+  delete module compoundAlignerBovine
+
+  # Create modules
+  create module -f modules/build/extension/bovine/compoundAlignerBovine.xml
+
+  # Compute alignments
+  compute alignment AL_BIV compoundAlignerBovine
+  compute alignment AL_JDV compoundAlignerBovine

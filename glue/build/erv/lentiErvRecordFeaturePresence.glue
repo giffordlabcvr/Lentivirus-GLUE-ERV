@@ -1,0 +1,14 @@
+  delete module lentiFeaturePresenceRecorder
+  create module -f modules/build/core/lentiFeaturePresenceRecorder.xml
+
+  module lentiFeaturePresenceRecorder
+     
+    record feature-presence AL_RELIK   --recursive -f whole_genome --descendentFeatures
+    record feature-presence AL_PSIV1   --recursive -f whole_genome --descendentFeatures
+    record feature-presence AL_PSIV2   --recursive -f whole_genome --descendentFeatures
+    record feature-presence AL_MELV    --recursive -f whole_genome --descendentFeatures
+    record feature-presence AL_DELV    --recursive -f whole_genome --descendentFeatures
+    record feature-presence AL_SpELV   --recursive -f whole_genome --descendentFeatures
+
+   exit
+

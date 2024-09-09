@@ -1,0 +1,158 @@
+<!-- Lentivirus main group references -->
+<ncbiImporter>
+
+  <sourceName>ncbi-curated-erv</sourceName>
+  <giNumberFieldName>gb_gi_number</giNumberFieldName>
+  <specificPrimaryAccessions>
+	
+	<!-- Parallel Germline Infiltration of a Lentivirus in Two Malagasy Lemurs -->
+	<primaryAccession>FJ707322</primaryAccession>
+	<primaryAccession>FJ707323</primaryAccession>
+	<primaryAccession>FJ707324</primaryAccession>
+	<primaryAccession>FJ707325</primaryAccession>
+	<primaryAccession>FJ707326</primaryAccession>
+	<primaryAccession>FJ707327</primaryAccession>
+	<primaryAccession>FJ707328</primaryAccession>
+	<primaryAccession>FJ707329</primaryAccession>
+	<primaryAccession>FJ707330</primaryAccession>
+	<primaryAccession>FJ707331</primaryAccession>
+	<primaryAccession>FJ707332</primaryAccession>
+	<primaryAccession>FJ707333</primaryAccession>
+	<primaryAccession>FJ707334</primaryAccession>
+	<primaryAccession>FJ707335</primaryAccession>
+	<primaryAccession>FJ707336</primaryAccession>
+	<primaryAccession>FJ707337</primaryAccession>
+	<primaryAccession>FJ707338</primaryAccession>
+	<primaryAccession>FJ707339</primaryAccession>
+	<primaryAccession>FJ707340</primaryAccession>
+	<primaryAccession>FJ707341</primaryAccession>
+	<primaryAccession>FJ707342</primaryAccession>
+	<primaryAccession>FJ707343</primaryAccession>
+	<primaryAccession>FJ707344</primaryAccession>
+	<primaryAccession>FJ707345</primaryAccession>
+	<primaryAccession>FJ707346</primaryAccession>
+	<primaryAccession>FJ707347</primaryAccession>
+	<primaryAccession>FJ707348</primaryAccession>
+	<primaryAccession>FJ707349</primaryAccession>
+	<primaryAccession>FJ707350</primaryAccession>
+	<primaryAccession>FJ707351</primaryAccession>
+	<primaryAccession>FJ707352</primaryAccession>
+	<primaryAccession>FJ707353</primaryAccession>
+	<primaryAccession>FJ707354</primaryAccession>
+	<primaryAccession>FJ707355</primaryAccession>
+	<primaryAccession>FJ707356</primaryAccession>
+	<primaryAccession>FJ707357</primaryAccession>
+	<primaryAccession>FJ707358</primaryAccession>
+	<primaryAccession>FJ707359</primaryAccession>
+
+	
+	<!-- Identification of a RELIK orthologue in the European hare (Lepus europaeus)
+	reveals a minimum age of 12 million years for the lagomorph lentiviruses. -->
+	<primaryAccession>FJ493030</primaryAccession>
+	<primaryAccession>FJ493031</primaryAccession>
+	<primaryAccession>FJ493032</primaryAccession>
+	<primaryAccession>FJ493033</primaryAccession>
+	<primaryAccession>FJ493034</primaryAccession>
+
+	<!-- Life History of the Oldest Lentivirus: Characterization of ELVgv Integrations in
+	the Dermopteran Genome. -->
+
+	<primaryAccession>KX022581</primaryAccession>
+	<primaryAccession>KX022582</primaryAccession>
+	<primaryAccession>KX022583</primaryAccession>
+	<primaryAccession>KX022584</primaryAccession>
+	<primaryAccession>KX022585</primaryAccession>
+	<primaryAccession>KX022586</primaryAccession>
+	<primaryAccession>KX022587</primaryAccession>
+	<primaryAccession>KX022588</primaryAccession>
+	<primaryAccession>KX022589</primaryAccession>
+
+
+
+	<!-- Endogenous Lentiviral Elements in the Weasel Family (Mustelidae)  -->
+	<primaryAccession>JQ700124</primaryAccession>
+	<primaryAccession>JQ700125</primaryAccession>
+	<primaryAccession>JQ700126</primaryAccession>
+	<primaryAccession>JQ700127</primaryAccession>
+	<primaryAccession>JQ700128</primaryAccession>
+	<primaryAccession>JQ700129</primaryAccession>
+	<primaryAccession>JQ700130</primaryAccession>
+	<primaryAccession>JQ700131</primaryAccession>
+	<primaryAccession>JQ700132</primaryAccession>
+	<primaryAccession>JQ700133</primaryAccession>
+	<primaryAccession>JQ700134</primaryAccession>
+	<primaryAccession>JQ700135</primaryAccession>
+	<primaryAccession>JQ700136</primaryAccession>
+	<primaryAccession>JQ700137</primaryAccession>
+	<primaryAccession>JQ700138</primaryAccession>
+	<primaryAccession>JQ700139</primaryAccession>
+	<primaryAccession>JQ700140</primaryAccession>
+	<primaryAccession>JQ700141</primaryAccession>
+	<primaryAccession>JQ700142</primaryAccession>
+	<primaryAccession>JQ700143</primaryAccession>
+	<primaryAccession>JQ700144</primaryAccession>
+	<primaryAccession>JQ700145</primaryAccession>
+	<primaryAccession>JQ700146</primaryAccession>
+	<primaryAccession>JQ700147</primaryAccession>
+	<primaryAccession>JQ700148</primaryAccession>
+	<primaryAccession>JQ700149</primaryAccession>
+	<primaryAccession>JQ700150</primaryAccession>
+	<primaryAccession>JQ700151</primaryAccession>
+	<primaryAccession>JQ700152</primaryAccession>
+	<primaryAccession>JQ700153</primaryAccession>
+	<primaryAccession>JQ700154</primaryAccession>
+	<primaryAccession>JQ700155</primaryAccession>
+	<primaryAccession>JQ700156</primaryAccession>
+	<primaryAccession>JQ700157</primaryAccession>
+	<primaryAccession>JQ700158</primaryAccession>
+	<primaryAccession>JQ700159</primaryAccession>
+	<primaryAccession>JQ700160</primaryAccession>
+	<primaryAccession>JQ700161</primaryAccession>
+	<primaryAccession>JQ700162</primaryAccession>
+	<primaryAccession>JQ700163</primaryAccession>
+	<primaryAccession>JQ700164</primaryAccession>
+	<primaryAccession>JQ700165</primaryAccession>
+	<primaryAccession>JQ700166</primaryAccession>
+	<primaryAccession>JQ700167</primaryAccession>
+	<primaryAccession>JQ700168</primaryAccession>
+	<primaryAccession>JQ700169</primaryAccession>
+	<primaryAccession>JQ700170</primaryAccession>
+	<primaryAccession>JQ700171</primaryAccession>
+	<primaryAccession>JQ700172</primaryAccession>
+	<primaryAccession>JQ700173</primaryAccession>
+	<primaryAccession>JQ700174</primaryAccession>
+	<primaryAccession>JQ700175</primaryAccession>
+	<primaryAccession>JQ700176</primaryAccession>
+	<primaryAccession>JQ700177</primaryAccession>
+	<primaryAccession>JQ700178</primaryAccession>
+	<primaryAccession>JQ700179</primaryAccession>
+	<primaryAccession>JQ700180</primaryAccession>
+	<primaryAccession>JQ700181</primaryAccession>
+	<primaryAccession>JQ700182</primaryAccession>
+	<primaryAccession>JQ700183</primaryAccession>
+	<primaryAccession>JQ700184</primaryAccession>
+	<primaryAccession>JQ700185</primaryAccession>
+	<primaryAccession>JQ700186</primaryAccession>
+	<primaryAccession>JQ700187</primaryAccession>
+	<primaryAccession>JQ700188</primaryAccession>
+	<primaryAccession>JQ700189</primaryAccession>
+	<primaryAccession>JQ700190</primaryAccession>
+	<primaryAccession>JQ700191</primaryAccession>
+	<primaryAccession>JQ700192</primaryAccession>
+	<primaryAccession>JQ700193</primaryAccession>
+	<primaryAccession>JQ700194</primaryAccession>
+	<primaryAccession>JQ700195</primaryAccession>
+	<primaryAccession>JQ700196</primaryAccession>
+	<primaryAccession>JQ700197</primaryAccession>
+	<primaryAccession>JQ700198</primaryAccession>
+	<primaryAccession>JQ700199</primaryAccession>
+	<primaryAccession>JQ700200</primaryAccession>
+
+
+
+  </specificPrimaryAccessions>
+  <sequenceFormat>GENBANK_XML</sequenceFormat>
+  <sequenceIdField>PRIMARY_ACCESSION</sequenceIdField>
+  
+</ncbiImporter>
+

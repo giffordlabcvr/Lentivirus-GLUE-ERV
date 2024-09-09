@@ -1,0 +1,35 @@
+
+  delete module figTreeAnnotationExporterSrlv
+
+  create module -f modules/analysis/phylogeny/extension/srlv/figTreeAnnotationExporterSrlv.xml
+
+
+  # Export annotations
+  module figTreeAnnotationExporterSrlv 
+
+    #export figtree-annotation AL_OvineCaprine -c -w "fLocNotes.featureLoc.feature.name = 'matrix'  \
+    #  and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/internal/lenti-srlv-matrix.figtree-annotations.tsv
+
+    #export figtree-annotation AL_OvineCaprine -c -w "fLocNotes.featureLoc.feature.name = 'capsid'  \
+    #  and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/internal/lenti-srlv-capsid.figtree-annotations.tsv
+
+    export figtree-annotation AL_OvineCaprine -c -w "fLocNotes.featureLoc.feature.name = 'gag'  \
+      and fLocNotes.ref_nt_coverage_pct >= 10" -f trees/internal/lenti-srlv-gag.figtree-annotations.tsv
+
+    export figtree-annotation AL_OvineCaprine -c -w "fLocNotes.featureLoc.feature.name = 'RT'  \
+      and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/internal/lenti-srlv-rt.figtree-annotations.tsv
+
+    #export figtree-annotation AL_OvineCaprine -c -w "fLocNotes.featureLoc.feature.name = 'IN'  \
+    #  and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/internal/lenti-srlv-in.figtree-annotations.tsv
+
+    export figtree-annotation AL_OvineCaprine -c -w "fLocNotes.featureLoc.feature.name = 'pol'  \
+      and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/internal/lenti-srlv-pol.figtree-annotations.tsv
+
+    export figtree-annotation AL_OvineCaprine -c -w "fLocNotes.featureLoc.feature.name = 'env'  \
+      and fLocNotes.ref_nt_coverage_pct >= 10" -f trees/internal/lenti-srlv-env.figtree-annotations.tsv
+
+    #export figtree-annotation AL_OvineCaprine -c -w "fLocNotes.featureLoc.feature.name = 'whole_genome'  \
+    #  and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/internal/lenti-srlv-genome.figtree-annotations.tsv
+
+  exit
+

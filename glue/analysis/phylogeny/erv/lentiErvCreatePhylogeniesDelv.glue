@@ -1,0 +1,86 @@
+
+  # Clean up from any previous run of this file   
+  delete module raxmlPhylogenyGenerator
+  delete module lentiPhyloUtility
+  delete module lentiErvFigTreeAnnotationExporter 
+  delete module alignmentColumnsSelectorDelvGag
+  delete module alignmentColumnsSelectorDelvPol
+  delete module alignmentColumnsSelectorDelvEnv
+  delete module alignmentColumnsSelectorDelvLtr5
+
+  # Create all the modules we need
+  create module -t raxmlPhylogenyGenerator
+  create module -f modules/core/lentiPhyloUtility.xml
+  create module -f modules/erv/lentiErvFigTreeAnnotationExporter.xml
+  create module -f modules/erv/alignmentColumnsSelectorDelvLtr5.xml
+  create module -f modules/erv/alignmentColumnsSelectorDelvGag.xml
+  create module -f modules/erv/alignmentColumnsSelectorDelvPol.xml
+  create module -f modules/erv/alignmentColumnsSelectorDelvEnv.xml
+
+  
+  # Create the phylogenies
+  module raxmlPhylogenyGenerator
+
+    generate nucleotide phylogeny AL_DELV -s alignmentColumnsSelectorDelvLtr5 \
+       -w "fLocNotes.featureLoc.feature.name = '5LTR' and fLocNotes.ref_nt_coverage_pct >= 50" \
+       -o trees/erv-lineage/delv-ltr.tre NEWICK_BOOTSTRAPS
+
+    generate nucleotide phylogeny AL_DELV -s alignmentColumnsSelectorDelvGag \
+      -w "fLocNotes.featureLoc.feature.name = 'gag' and fLocNotes.ref_nt_coverage_pct >= 50" \
+      -o trees/erv-lineage/delv-pol.tre NEWICK_BOOTSTRAPS
+
+    generate nucleotide phylogeny AL_DELV -s alignmentColumnsSelectorDelvPol \
+      -w "fLocNotes.featureLoc.feature.name = 'pol' and fLocNotes.ref_nt_coverage_pct >= 50" \
+      -o trees/erv-lineage/delv-env.tre NEWICK_BOOTSTRAPS
+
+    generate nucleotide phylogeny AL_DELV -s alignmentColumnsSelectorDelvEnv \
+      -w "fLocNotes.featureLoc.feature.name = 'env' and fLocNotes.ref_nt_coverage_pct >= 50" \
+      -o trees/erv-lineage/delv-gag.tre NEWICK_BOOTSTRAPS
+
+    exit
+
+
+  # Re-root phylogeny 
+  module LentiPhyloUtility 
+  
+	reroot-phylogeny \
+      --inputFile trees/erv-lineage/delv-ltr.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/erv-lineage/delv-ltr.MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/erv-lineage/delv-gag.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/erv-lineage/delv-gag.MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/erv-lineage/delv-pol.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/erv-lineage/delv-pol.MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/erv-lineage/delv-env.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/erv-lineage/delv-env.MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+    exit
+
+
+  # Export annotations
+  module lentiErvFigTreeAnnotationExporter 
+
+    export figtree-annotation AL_DELV -w "fLocNotes.featureLoc.feature.name = '5LTR'  \
+      and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/erv-lineage/delv-ltr.figtree-annotations.tsv
+
+    export figtree-annotation AL_DELV -w "fLocNotes.featureLoc.feature.name = 'gag'  \
+      and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/erv-lineage/delv-gag.figtree-annotations.tsv
+
+    export figtree-annotation AL_DELV -w "fLocNotes.featureLoc.feature.name = 'pol'  \
+      and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/erv-lineage/delv-pol.figtree-annotations.tsv
+
+    export figtree-annotation AL_DELV -w "fLocNotes.featureLoc.feature.name = 'env'  \
+      and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/erv-lineage/delv-env.figtree-annotations.tsv
+
+
+  exit
+

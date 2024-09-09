@@ -1,0 +1,14 @@
+  delete module srlvPhyloImporter
+  create module -f  modules/build/extension/srlv/srlvPhyloImporter.xml
+
+  module srlvPhyloImporter
+
+	import phylogeny AL_TREE_OvineCaprine \
+	--recursive  \
+	--anyAlignment  \
+	--whereClause "sequence.referenceSequences.name != null and referenceMember = false"  \
+	--inputFile trees/internal/srlvReferencePhylogenyMidpointRerooted.tree NEWICK_BOOTSTRAPS  \
+	--fieldName phylogeny
+
+	exit
+  

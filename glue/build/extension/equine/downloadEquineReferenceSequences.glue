@@ -1,0 +1,12 @@
+
+  # Clean up any previous - delete modules
+  delete module ncbiImporterRefseqsEquine
+  
+  # Create modules
+  create module -f modules/build/extension/equine/ncbiImporterRefseqsEquine.xml
+
+  # Download NCBI sequences 
+  module ncbiImporterRefseqsEquine import
+
+  # Export sources
+  export source ncbi-refseqs-equine

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<alignmentColumnsSelector>
+
+    <relRefName>REF_SRLV_B</relRefName>
+    
+    
+    <aminoAcidRegionSelector>
+        <featureName>IN</featureName>
+        <startCodon>1</startCodon>
+        <endCodon>275</endCodon>
+    </aminoAcidRegionSelector>
+    
+    <nucleotideRegionSelector>
+        <featureName>IN</featureName>
+        <startNt>4204</startNt>
+        <endNt>5028</endNt>
+    </nucleotideRegionSelector>
+
+</alignmentColumnsSelector>

@@ -1,0 +1,40 @@
+  #~# Define constrained alignment tree
+
+  #~# Create root alignment
+  create alignment AL_ROOT -r REF_FIV
+ 
+  #~# Add children to root alignment 
+  alignment AL_ROOT
+
+	set field displayName "Lentivirus"
+
+	# Add all members
+	add member -a
+
+	extract child AL_Primate      --refName REF_HIV_1M
+	demote member AL_Primate      --whereClause "sequence.subgenus = 'Primate'"
+ 
+	extract child AL_Feline       --refName REF_FIV
+	demote member AL_Feline       --whereClause "sequence.subgenus = 'Feline'"
+
+	extract child AL_OvineCaprine --refName REF_SRLV_A
+	demote member AL_OvineCaprine --whereClause "sequence.subgenus = 'Ovine-Caprine'"
+
+	extract child AL_Bovine       --refName REF_BIV
+	demote member AL_Bovine       --whereClause "sequence.subgenus = 'Bovine'"
+
+	extract child AL_Equine       --refName REF_EIAV_Am
+	demote member AL_Equine       --whereClause "sequence.subgenus = 'Equine'"
+  
+	exit
+
+
+  #~# Derive constrained alignment segments from unconstrained alignments
+  alignment AL_ROOT derive segments AL_UNC_ROOT -a --existingMembersOnly --mergeStrategy OVERWRITE
+
+
+  #~# Set clade categories
+  alignment AL_ROOT set field clade_category genus
+
+
+

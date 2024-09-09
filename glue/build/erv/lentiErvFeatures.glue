@@ -1,0 +1,22 @@
+
+  # Paleovirus-specific coding features
+
+  # Accessory genes
+
+  create feature DELV_orf1 -p whole_genome "DELV_orf1"
+  feature DELV_orf1 set field displayName "DELV_orf1"
+  feature DELV_orf1 set metatag OWN_CODON_NUMBERING true
+  feature DELV_orf1 set metatag INCLUDE_IN_SUMMARY true
+  feature DELV_orf1 set metatag CODES_AMINO_ACIDS true
+
+  create feature DELV_orf3 -p whole_genome "DELV_orf3"
+  feature DELV_orf3 set field displayName "DELV_orf3"
+  feature DELV_orf3 set metatag OWN_CODON_NUMBERING true
+  feature DELV_orf3 set metatag INCLUDE_IN_SUMMARY true
+  feature DELV_orf3 set metatag CODES_AMINO_ACIDS true
+
+  create feature orfx -p whole_genome "orfx"
+  feature orfx set field displayName "orfx"
+  feature orfx set metatag OWN_CODON_NUMBERING true
+  feature orfx set metatag INCLUDE_IN_SUMMARY true
+  feature orfx set metatag CODES_AMINO_ACIDS true

@@ -1,0 +1,63 @@
+
+  # Clean up in case of previous execution
+  delete module raxmlPhylogenyGenerator
+  delete module lentiPhyloUtility
+  delete module alignmentColumnsSelectorSrlvBcapsid
+  delete module alignmentColumnsSelectorSrlvBmatrix
+  delete module alignmentColumnsSelectorSrlvBgag
+  delete module alignmentColumnsSelectorSrlvBrt
+  delete module alignmentColumnsSelectorSrlvBintegrase
+  delete module alignmentColumnsSelectorSrlvBpol
+  delete module alignmentColumnsSelectorSrlvBenv
+  delete module alignmentColumnsSelectorSrlvBgenome
+ 
+
+  # Create all the modules we need
+  create module -t raxmlPhylogenyGenerator
+  create module -f modules/analysis/phylogeny/core/lentiPhyloUtility.xml
+  create module -f modules/analysis/phylogeny/extension/srlv/alignmentColumnsSelectorSrlvBcapsid.xml
+  create module -f modules/analysis/phylogeny/extension/srlv/alignmentColumnsSelectorSrlvBmatrix.xml
+  create module -f modules/analysis/phylogeny/extension/srlv/alignmentColumnsSelectorSrlvBgag.xml
+  create module -f modules/analysis/phylogeny/extension/srlv/alignmentColumnsSelectorSrlvBrt.xml
+  create module -f modules/analysis/phylogeny/extension/srlv/alignmentColumnsSelectorSrlvBintegrase.xml
+  create module -f modules/analysis/phylogeny/extension/srlv/alignmentColumnsSelectorSrlvBpol.xml
+  create module -f modules/analysis/phylogeny/extension/srlv/alignmentColumnsSelectorSrlvBenv.xml
+  create module -f modules/analysis/phylogeny/extension/srlv/alignmentColumnsSelectorSrlvBgenome.xml
+
+
+  
+  # Create the phylogenies
+  module raxmlPhylogenyGenerator
+
+
+    generate nucleotide phylogeny AL_SRLV_B1 -s alignmentColumnsSelectorSrlvBgag \
+      -w "fLocNotes.featureLoc.feature.name = 'gag' and fLocNotes.ref_nt_coverage_pct >= 50" \
+      -o trees/tip/srlv-b/lenti-srlv-b1-gag.tre NEWICK_BOOTSTRAPS
+
+    #generate nucleotide phylogeny AL_SRLV_B1 -s alignmentColumnsSelectorSrlvBcapsid \
+    #  -w "fLocNotes.featureLoc.feature.name = 'capsid' and fLocNotes.ref_nt_coverage_pct >= 80" \
+    #  -o trees/tip/srlv-b/lenti-srlv-b1-capsid.tre NEWICK_BOOTSTRAPS
+
+    generate nucleotide phylogeny AL_SRLV_B1 -s alignmentColumnsSelectorSrlvBpol \
+      -w "fLocNotes.featureLoc.feature.name = 'pol' and fLocNotes.ref_nt_coverage_pct >= 50" \
+      -o trees/tip/srlv-b/lenti-srlv-b1-pol.tre NEWICK_BOOTSTRAPS
+
+    generate nucleotide phylogeny AL_SRLV_B1 -s alignmentColumnsSelectorSrlvBrt \
+      -w "fLocNotes.featureLoc.feature.name = 'RT' and fLocNotes.ref_nt_coverage_pct >= 70" \
+      -o trees/tip/srlv-b/lenti-srlv-b1-rt.tre NEWICK_BOOTSTRAPS
+
+    generate nucleotide phylogeny AL_SRLV_B1 -s alignmentColumnsSelectorSrlvBintegrase \
+      -w "fLocNotes.featureLoc.feature.name = 'in' and fLocNotes.ref_nt_coverage_pct >= 60" \
+      -o trees/tip/srlv-b/lenti-srlv-b1-in.tre NEWICK_BOOTSTRAPS
+
+    generate nucleotide phylogeny AL_SRLV_B1 -s alignmentColumnsSelectorSrlvBenv \
+      -w "fLocNotes.featureLoc.feature.name = 'env' and fLocNotes.ref_nt_coverage_pct >= 20" \
+      -o trees/tip/srlv-b/lenti-srlv-b1-env.tre NEWICK_BOOTSTRAPS
+
+    #generate nucleotide phylogeny AL_SRLV_B1 -s alignmentColumnsSelectorSrlvBgenome \
+    #  -w "fLocNotes.featureLoc.feature.name = 'whole_genome' and fLocNotes.ref_nt_coverage_pct >= 80" \
+    #  -o trees/tip/srlv-b/lenti-srlv-b1-genome.tre NEWICK_BOOTSTRAPS
+
+    exit
+    
+    

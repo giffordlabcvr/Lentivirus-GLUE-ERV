@@ -1,0 +1,10 @@
+#~# Import unconstrained reference alignments
+
+module unconstrainedAlignmentImporter
+
+  #~# Equine group
+  
+  import AL_UNC_Equine -f alignments/internal/equine-group.aln.fna
+
+  exit
+

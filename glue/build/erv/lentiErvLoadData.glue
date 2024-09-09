@@ -1,0 +1,15 @@
+  delete module lentiErvGenbankXmlPopulator
+  create module -f modules/build/erv/lentiErvGenbankXmlPopulator.xml
+
+  # Populate fields using GenBank file data
+  module lentiErvGenbankXmlPopulator populate
+
+  run script glue/build/erv/lentiErvLoadRefConData1.js
+  run script glue/build/erv/lentiErvLoadRefConData2.js
+
+  run script glue/build/erv/lentiErvLoadLocusData1.js
+  run script glue/build/erv/lentiErvLoadLocusData2.js
+  
+  run script glue/build/erv/loadGenbankErvData1.js
+  run script glue/build/erv/loadGenbankErvData2.js
+

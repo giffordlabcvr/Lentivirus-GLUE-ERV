@@ -1,0 +1,110 @@
+
+  # Clean up in case of previous execution
+  delete module raxmlPhylogenyGenerator
+  delete module lentiPhyloUtility
+  delete module alignmentColumnsSelectorSrlvAcapsid
+  delete module alignmentColumnsSelectorSrlvAmatrix
+  delete module alignmentColumnsSelectorSrlvAgag
+  delete module alignmentColumnsSelectorSrlvArt
+  delete module alignmentColumnsSelectorSrlvAintegrase
+  delete module alignmentColumnsSelectorSrlvApol
+  delete module alignmentColumnsSelectorSrlvAenv
+  delete module alignmentColumnsSelectorSrlvAgenome
+ 
+
+  # Create all the modules we need
+  create module -t raxmlPhylogenyGenerator
+  create module -f modules//analysis/phylogeny/core/lentiPhyloUtility.xml
+  create module -f modules/analysis/phylogeny/extension/srlv/alignmentColumnsSelectorSrlvAcapsid.xml
+  create module -f modules/analysis/phylogeny/extension/srlv/alignmentColumnsSelectorSrlvAmatrix.xml
+  create module -f modules/analysis/phylogeny/extension/srlv/alignmentColumnsSelectorSrlvAgag.xml
+  create module -f modules/analysis/phylogeny/extension/srlv/alignmentColumnsSelectorSrlvArt.xml
+  create module -f modules/analysis/phylogeny/extension/srlv/alignmentColumnsSelectorSrlvAintegrase.xml
+  create module -f modules/analysis/phylogeny/extension/srlv/alignmentColumnsSelectorSrlvApol.xml
+  create module -f modules/analysis/phylogeny/extension/srlv/alignmentColumnsSelectorSrlvAenv.xml
+  create module -f modules/analysis/phylogeny/extension/srlv/alignmentColumnsSelectorSrlvAgenome.xml
+  
+  # Create the phylogenies
+  module raxmlPhylogenyGenerator
+
+    generate nucleotide phylogeny AL_SRLV_A1 -s alignmentColumnsSelectorSrlvAcapsid \
+      -w "fLocNotes.featureLoc.feature.name = 'capsid' and fLocNotes.ref_nt_coverage_pct >= 80" \
+      -o trees/tip/srlv-a/lenti-srlv-a1-capsid.tre NEWICK_BOOTSTRAPS
+
+    generate nucleotide phylogeny AL_SRLV_A1 -s alignmentColumnsSelectorSrlvAmatrix \
+      -w "fLocNotes.featureLoc.feature.name = 'matrix' and fLocNotes.ref_nt_coverage_pct >= 80" \
+      -o trees/tip/srlv-a/lenti-srlv-a1-matrix.tre NEWICK_BOOTSTRAPS
+
+    generate nucleotide phylogeny AL_SRLV_A1 -s alignmentColumnsSelectorSrlvAgag \
+      -w "fLocNotes.featureLoc.feature.name = 'gag' and fLocNotes.ref_nt_coverage_pct >= 80" \
+      -o trees/tip/srlv-a/lenti-srlv-a1-gag.tre NEWICK_BOOTSTRAPS
+
+    generate nucleotide phylogeny AL_SRLV_A1 -s alignmentColumnsSelectorSrlvArt \
+      -w "fLocNotes.featureLoc.feature.name = 'RT' and fLocNotes.ref_nt_coverage_pct >= 80" \
+      -o trees/tip/srlv-a/lenti-srlv-a1-rt.tre NEWICK_BOOTSTRAPS
+
+    generate nucleotide phylogeny AL_SRLV_A1 -s alignmentColumnsSelectorSrlvAintegrase \
+      -w "fLocNotes.featureLoc.feature.name = 'IN' and fLocNotes.ref_nt_coverage_pct >= 80" \
+      -o trees/tip/srlv-a/lenti-srlv-a1-in.tre NEWICK_BOOTSTRAPS
+
+    generate nucleotide phylogeny AL_SRLV_A1 -s alignmentColumnsSelectorSrlvApol \
+      -w "fLocNotes.featureLoc.feature.name = 'pol' and fLocNotes.ref_nt_coverage_pct >= 80" \
+      -o trees/tip/srlv-a/lenti-srlv-a1-pol.tre NEWICK_BOOTSTRAPS
+
+    generate nucleotide phylogeny AL_SRLV_A1 -s alignmentColumnsSelectorSrlvAenv \
+      -w "fLocNotes.featureLoc.feature.name = 'env' and fLocNotes.ref_nt_coverage_pct >= 80" \
+      -o trees/tip/srlv-a/lenti-srlv-a1-env.tre NEWICK_BOOTSTRAPS
+
+    generate nucleotide phylogeny AL_SRLV_A1 -s alignmentColumnsSelectorSrlvAgenome \
+      -w "fLocNotes.featureLoc.feature.name = 'whole_genome' and fLocNotes.ref_nt_coverage_pct >= 80" \
+      -o trees/tip/srlv-a/lenti-srlv-a1-genome.tre NEWICK_BOOTSTRAPS
+
+    exit
+
+
+
+  # Re-root phylogeny 
+  module lentiPhyloUtility 
+
+	reroot-phylogeny \
+      --inputFile trees/tip/srlv-a/lenti-srlv-a1-matrix.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/tip/srlv-a/lenti-srlv-a1-matrix.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/tip/srlv-a/lenti-srlv-a1-capsid.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/tip/srlv-a/lenti-srlv-a1-capsid.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/tip/srlv-a/lenti-srlv-a1-gag.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/tip/srlv-a/lenti-srlv-a1-gag.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/tip/srlv-a/lenti-srlv-a1-pol.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/tip/srlv-a/lenti-srlv-a1-pol.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/tip/srlv-a/lenti-srlv-a1-rt.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/tip/srlv-a/lenti-srlv-a1-rt.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/tip/srlv-a/lenti-srlv-a1-in.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/tip/srlv-a/lenti-srlv-a1-in.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/tip/srlv-a/lenti-srlv-a1-env.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/tip/srlv-a/lenti-srlv-a1-env.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/tip/srlv-a/lenti-srlv-a1-genome.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/tip/srlv-a/lenti-srlv-a1-genome.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+    exit
+

@@ -1,0 +1,27 @@
+
+  # Re-root phylogeny 
+  module lentiPhyloUtility 
+
+	reroot-phylogeny \
+      --inputFile trees/internal/lenti-srlv-rt.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/internal/lenti-srlv-rt.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+      --outputFile trees/internal/lenti-srlv-in.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/internal/lenti-srlv-pol.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/internal/lenti-srlv-pol.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/internal/lenti-srlv-env.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/internal/lenti-srlv-env.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/internal/lenti-srlv-genome.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/internal/lenti-srlv-genome.export_nucs-MidpointRerooted.tree NEWICK_BOOTSTRAPS
+
+    exit
+

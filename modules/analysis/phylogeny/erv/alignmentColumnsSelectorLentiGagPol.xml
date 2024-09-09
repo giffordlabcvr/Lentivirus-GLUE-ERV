@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<alignmentColumnsSelector>
+
+    <relRefName>REF_FIV</relRefName>
+    
+    <aminoAcidRegionSelector>
+        <featureName>gag-pol</featureName>
+        <startCodon>20</startCodon>
+        <endCodon>1040</endCodon>
+    </aminoAcidRegionSelector>
+
+    
+</alignmentColumnsSelector>
+

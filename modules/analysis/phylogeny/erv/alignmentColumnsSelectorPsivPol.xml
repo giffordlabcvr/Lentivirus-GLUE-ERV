@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<alignmentColumnsSelector>
+
+    <relRefName>REF_pSIV2</relRefName>
+    
+    <aminoAcidRegionSelector>
+        <featureName>pol</featureName>
+        <startCodon>1</startCodon>
+        <endCodon>1053</endCodon>
+    </aminoAcidRegionSelector>
+    
+    <nucleotideRegionSelector>
+        <featureName>pol</featureName>
+        <startNt>1795</startNt>
+        <endNt>4951</endNt>
+    </nucleotideRegionSelector>
+    
+</alignmentColumnsSelector>

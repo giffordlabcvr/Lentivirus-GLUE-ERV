@@ -1,0 +1,122 @@
+  # Clean up from any previous run of this file   
+  delete module lentiRaxmlPhylogenyGenerator
+  delete module lentiPhyloUtility
+  delete module lentiErvFigTreeAnnotationExporter 
+
+  delete module alignmentColumnsSelectorLentiErvGag
+  delete module alignmentColumnsSelectorLentiErvProPol
+
+  delete module alignmentColumnsSelectorLentiErvCapsid
+  delete module alignmentColumnsSelectorLentiErvMatrix
+  delete module alignmentColumnsSelectorLentiErvNucleocapsid
+  delete module alignmentColumnsSelectorLentiErvRt
+  delete module alignmentColumnsSelectorLentiErvIntegrase
+    
+  # Create all the modules we need
+  create module -f modules/core/lentiRaxmlPhylogenyGenerator.xml
+  create module -f modules/core/lentiPhyloUtility.xml
+  create module -f modules/erv/lentiErvFigTreeAnnotationExporter.xml
+  
+  create module -f modules/erv/phylogeny/alignmentColumnsSelectorLentiErvGag.xml
+  create module -f modules/erv/phylogeny/alignmentColumnsSelectorLentiErvProPol.xml
+  
+  create module -f modules/erv/phylogeny/alignmentColumnsSelectorLentiErvCapsid.xml
+  create module -f modules/erv/phylogeny/alignmentColumnsSelectorLentiErvMatrix.xml
+  create module -f modules/erv/phylogeny/alignmentColumnsSelectorLentiErvNucleocapsid.xml
+  create module -f modules/erv/phylogeny/alignmentColumnsSelectorLentiErvRt.xml  
+  create module -f modules/erv/phylogeny/alignmentColumnsSelectorLentiErvIntegrase.xml
+  create module -f modules/erv/phylogeny/alignmentColumnsSelectorLentiErvDutpase.xml
+  
+  
+  # Create the phylogenies
+  module lentiRaxmlPhylogenyGenerator
+
+
+    generate amino-acid phylogeny AL_ROOT -s alignmentColumnsSelectorLentiErvGag \
+      -w "fLocNotes.featureLoc.feature.name = 'gag' and fLocNotes.ref_nt_coverage_pct >= 50" \
+      -o trees/root/lenti-gag-prot.tre NEWICK_BOOTSTRAPS
+
+    generate amino-acid phylogeny AL_ROOT -s alignmentColumnsSelectorLentiErvProPol \
+      -w "fLocNotes.featureLoc.feature.name = 'pro-pol' and fLocNotes.ref_nt_coverage_pct >= 50" \
+      -o trees/root/lenti-propol-prot.tre NEWICK_BOOTSTRAPS
+
+    generate amino-acid phylogeny AL_ROOT -s alignmentColumnsSelectorLentiErvCapsid \
+      -w "fLocNotes.featureLoc.feature.name = 'capsid' and fLocNotes.ref_nt_coverage_pct >= 50" \
+      -o trees/root/lenti-ca-prot.tre NEWICK_BOOTSTRAPS
+
+    generate amino-acid phylogeny AL_ROOT -s alignmentColumnsSelectorLentiErvRt \
+      -w "fLocNotes.featureLoc.feature.name = 'RT' and fLocNotes.ref_nt_coverage_pct >= 50" \
+      -o trees/root/lenti-rt-prot.tre NEWICK_BOOTSTRAPS
+
+    generate amino-acid phylogeny AL_ROOT -s alignmentColumnsSelectorLentiErvDutpase \
+      -w "fLocNotes.featureLoc.feature.name = 'dUTPase' and fLocNotes.ref_nt_coverage_pct >= 90" \
+      -o trees/root/lenti-dutpase-prot.tre NEWICK_BOOTSTRAPS
+
+    generate amino-acid phylogeny AL_ROOT -s alignmentColumnsSelectorLentiErvIntegrase \
+      -w "fLocNotes.featureLoc.feature.name = 'IN' and fLocNotes.ref_nt_coverage_pct >= 50" \
+      -o trees/root/lenti-integrase-prot.tre NEWICK_BOOTSTRAPS
+
+    exit
+
+
+  # Re-root phylogeny 
+  module LentiPhyloUtility 
+
+
+	reroot-phylogeny \
+      --inputFile trees/root/lenti-gag-prot.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/root/lenti-gag.export-MidpointRerooted-prot.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/root/lenti-propol-prot.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/root/lenti-propol.export-MidpointRerooted-prot.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/root/lenti-ca-prot.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/root/lenti-ca.export-MidpointRerooted-prot.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/root/lenti-rt-prot.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/root/lenti-rt.export-MidpointRerooted-prot.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/root/lenti-dutpase-prot.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/root/lenti-dutpase.export-MidpointRerooted-prot.tree NEWICK_BOOTSTRAPS
+
+	reroot-phylogeny \
+      --inputFile trees/root/lenti-integrase-prot.tre NEWICK_BOOTSTRAPS \
+      --midpoint \
+      --outputFile trees/root/lenti-integrase.export-MidpointRerooted-prot.tree NEWICK_BOOTSTRAPS
+
+    exit
+
+
+
+  # Export annotations
+  module lentiErvFigTreeAnnotationExporter 
+
+    export figtree-annotation AL_ROOT -w "fLocNotes.featureLoc.feature.name = 'gag'  \
+      and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/root/lenti-gag-prot.figtree-annotations.tsv
+
+    export figtree-annotation AL_ROOT -w "fLocNotes.featureLoc.feature.name = 'pro-pol'  \
+      and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/root/lenti-propol-prot.figtree-annotations.tsv
+
+    export figtree-annotation AL_ROOT -w "fLocNotes.featureLoc.feature.name = 'capsid'  \
+      and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/root/lenti-ca-prot.figtree-annotations.tsv
+
+    export figtree-annotation AL_ROOT -w "fLocNotes.featureLoc.feature.name = 'RT'  \
+      and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/root/lenti-rt-prot.figtree-annotations.tsv
+
+    export figtree-annotation AL_ROOT -w "fLocNotes.featureLoc.feature.name = 'dUTPase'  \
+      and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/root/lenti-dutpase-prot.figtree-annotations.tsv
+
+    export figtree-annotation AL_ROOT -w "fLocNotes.featureLoc.feature.name = 'IN'  \
+      and fLocNotes.ref_nt_coverage_pct >= 50" -f trees/root/lenti-in-prot.figtree-annotations.tsv
+
+  exit
+

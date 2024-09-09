@@ -1,0 +1,12 @@
+
+  # Clean up any previous - delete modules
+  delete module ncbiImporterCuratedEquine
+  
+  # Create modules
+  create module -f modules/build/extension/equine/ncbiImporterCuratedEquine.xml
+
+  # Download NCBI sequences 
+  module ncbiImporterCuratedEquine import
+
+  # Export sources
+  export source ncbi-curated-equine
