@@ -1,8 +1,0 @@
-  # Clean up
-  delete module compoundAlignerFeline
-
-  # Create modules
-  create module -f modules/build/extension/feline/compoundAlignerFeline.xml
-
-  # Compute alignments
-  compute alignment AL_Feline compoundAlignerFeline

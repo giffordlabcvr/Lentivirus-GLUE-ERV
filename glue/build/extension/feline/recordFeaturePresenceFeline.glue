@@ -1,9 +1,0 @@
-  delete module lentiFeaturePresenceRecorder
-  create module -f modules/build/core/lentiFeaturePresenceRecorder.xml
-
-  module lentiFeaturePresenceRecorder 
-
-    record feature-presence AL_FIV --featureName whole_genome --descendentFeatures
-   
-    exit
-

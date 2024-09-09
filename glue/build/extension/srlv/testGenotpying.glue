@@ -1,6 +1,0 @@
-
-	delete module srlvMaxLikelihoodGenotyper
-    delete module srlvMaxLikelihoodPlacer
-    create module -f modules/build/extension/srlv/srlvMaxLikelihoodPlacer.xml
-    create module -f modules/build/extension/srlv/srlvMaxLikelihoodGenotyper.xml
-	module srlvMaxLikelihoodGenotyper genotype sequence -w "sequenceID = 'KP975035'"

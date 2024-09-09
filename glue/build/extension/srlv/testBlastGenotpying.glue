@@ -1,6 +1,0 @@
-
-	delete module blastGenotyperSrlv
-    create module -f modules/build/extension/srlv/blastGenotyperSrlv.xml
-    #module blastGenotyperSrlv recognise sequence -w "sequenceID = 'OM517083'"
-    run script glue/build/extension/srlv/doBlastGenotying.js
-    #module blastGenotyperSrlv recognise sequence -a

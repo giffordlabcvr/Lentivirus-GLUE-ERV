@@ -1,3 +1,0 @@
-<fastaExporter>
-    <idTemplate>${sequenceID}|${renderProperty('species')}.${renderProperty('species_group')}.${renderProperty('subtype')}</idTemplate>
-</fastaExporter>
