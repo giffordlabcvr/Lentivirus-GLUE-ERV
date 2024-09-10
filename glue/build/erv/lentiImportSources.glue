@@ -1,3 +1,3 @@
-  import source sources/fasta-digs-erv/
-  import source sources/fasta-refseqs-erv/
-  import source sources/ncbi-curated-erv/
+  import source sources/erv/fasta-digs-erv/
+  import source sources/erv/fasta-refseqs-erv/
+  import source sources/erv/ncbi-curated-erv/

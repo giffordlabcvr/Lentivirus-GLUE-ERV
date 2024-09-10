@@ -19,8 +19,7 @@ _.each(loadResult, function(ervObj) {
 	glue.inMode("sequence/fasta-refseqs-erv/"+ervObj.sequenceID, function() {
 	
 		//glue.log("INFO", "Entering sequence table data for ERV reference:", ervObj.sequenceID);
-
-		glue.command(["set", "field", "name", ervObj.name]);
+		//glue.command(["set", "field", "name", ervObj.name]);
 		glue.command(["set", "field", "full_name", ervObj.full_name]);
 		glue.command(["set", "field", "subgenus", ervObj.subgenus]);
 		glue.command(["set", "field", "species", ervObj.name]);

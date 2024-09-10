@@ -1,7 +1,7 @@
 <genbankXmlPopulator>
 
 	<gbOrganism>
-		<propertyPopulator property="name"/>
+		<propertyPopulator property="full_name"/>
 	</gbOrganism>
 
 	<gbLength>
