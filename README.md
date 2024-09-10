@@ -7,3 +7,4 @@ Endogenous retroviruses (ERVs) are retrovirus-derived DNA sequences that occur i
 ERVs provide a unique source of retrospective information about the long-term history and retroviruses and their hosts. ERVs derived from lentiviruses are very rare, and for decades they were assumed not to occur. However, as described here, whole genome sequencing of vertebrates in the 2000s led to the discovery of ERVs derived from lentiviruses in a variety of species. These discoveries allowed the timeline of lentivirus evolution to be reliably calibrated.
 
 Progress in characterising ERVs has been hampered by the challenges encountered attempting to analyse their fragmentary and degenerated sequences. This greatly complicates comparative genomic analysis. Lentivirus-GLUE aims to address these issues for lentiviral ERVs. it applies a set of programmatic principles for systematically organising and refining the ERV 'fossil record'.
+
