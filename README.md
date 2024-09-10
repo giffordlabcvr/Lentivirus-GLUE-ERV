@@ -1,6 +1,6 @@
 Welcome to the GitHub repository for **Lentivirus-GLUE-ERV**!
 
-Lentivirus-GLUE-ERV extends [Lentivirus-GLUE](https://github.com/giffordlabcvr/Lentivirus-GLUE) through the incorporation of endogenous lentiviruses.
+Lentivirus-GLUE-ERV extends [Lentivirus-GLUE](https://github.com/giffordlabcvr/Lentivirus-GLUE) through the incorporation of endogenous lentivirus sequences.
 
 Endogenous retroviruses (ERVs) are retrovirus-derived DNA sequences that occur in the germline genomes of host species. ERVs arise when retroviruses infect germline cells (i.e. spermatozoa, eggs, or early embryonic cells) so that integrated retrovirus DNA is vertically inherited as a novel host allele.
 
