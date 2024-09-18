@@ -707,8 +707,6 @@ RELIK.455-Oryctolagus_cuniculus	RELIK	455	ERV	RELIK.455	Oryctolagus cuniculus	LT
 RELIK.456-Lepus_americanus	RELIK	456	ERV	RELIK.456	Lepus americanus	LTR	170	LTR[RELIK(-)]	157	PVJM010815444.1	-	1	157	RELiK	2840	2891	2	157	52	85.1	82.692	3.45	24	0
 RELIK.457-Oryctolagus_cuniculus	RELIK	457	ERV	RELIK.457	Oryctolagus cuniculus	LTR	185	LTR[RELIK(+)]	157	chr14	+	56223074	56223230	RELiK	2906	2956	3	155	51	82.8	88.235	2.34	23	0
 RELIK.458-Lepus_americanus	RELIK	458	ERV	RELIK.458	Lepus americanus	LTR	171	LTR[RELIK(+)]	152	PVJM010019462.1	+	1294	1445	RELiK	2883	2932	3	152	50	90.9	94	2.97	26	0
-RELIK.460-Lepus_timidus	RELIK	460	ERV	RELIK.460	Lepus timidus	provirus	1	pol[RELIK(+)]-env[RELIK(+)]-LTR[RELIK(+)]-LTR[RELIK(+)]-gag[RELIK(+)]-env[RELIK(+)]-env[RELIK(+)]-LTR[RELIK(+)]-LTR[RELIK(+)]	25033	CM019673.1	+	36793786	36818818	RELiK	1	593	11913	13688	593	926	91.231	0	1	1
-RELIK.460-Oryctolagus_cuniculus	RELIK	460	ERV	RELIK.460	Oryctolagus cuniculus	provirus	2	LTR[RELIK(+)]-pol[RELIK(+)]-pol[RELIK(+)]-pol[RELIK(+)]-env[RELIK(+)]-LTR[RELIK(+)]-LTR[RELIK(+)]-gag[RELIK(+)]-pol[RELIK(+)]-env[RELIK(+)]-env[RELIK(+)]-LTR[RELIK(+)]	31443	chrUn0420	+	104234	135676	RELiK	138	921	24675	27014	787	1198	89.835	0	1	3
 SpELV.1-Pedetes_capensis	SpELV	1	ERV	SpELV.1	Pedetes capensis	provirus	1	LTR-I[ELVpc(+)]-LTR-I[ELVpc(+)]-gag[FIVple(+)]-pol[SIVsyk(+)]	4282	VMDO01011022.1	+	63971	68252	ELVpc	474	1165	1153	3228	692	1433	100	0	1	0
 SpELV.2-Pedetes_capensis	SpELV	2	ERV	SpELV.2	Pedetes capensis	provirus	2	LTR-I[ELVpc(+)]-gag[FIVpco(+)]	1867	VMDO01050306.1	+	2112	3978	ELVpc	338	726	701	1867	392	514	70.918	4.36	168	2
 SpELV.3-Pedetes_capensis	SpELV	3	ERV	SpELV.3	Pedetes capensis	provirus	3	gag[RELIK(-)]	714	VMDO01082106.1	-	284	997	ELVpc	532	759	1	684	228	353	78.947	3.68	115	0
@@ -740,4 +738,3 @@ SpELV.32-Pedetes_capensis	SpELV	32	ERV	SpELV.32	Pedetes capensis	LTR	32	LTR-II[E
 SpELV.33-Pedetes_capensis	SpELV	33	ERV	SpELV.33	Pedetes capensis	LTR	33	LTR-II[ELVpc(+)]-LTR-II[ELVpc(+)]	429	VMDO01005449.1	+	1807	2235	ELVpc	4	142	2	376	146	85.9	47.26	6.44	23	5
 SpELV.34-Pedetes_capensis	SpELV	34	ERV	SpELV.34	Pedetes capensis	LTR	34	LTR-I[ELVpc(-)]-LTR-I[ELVpc(-)]	421	VMDO01003146.1	-	134124	134544	ELVpc	3	141	6	419	143	157	65.734	8.27	48	2
 SpELV.35-Pedetes_capensis	SpELV	35	ERV	SpELV.35	Pedetes capensis	LTR	35	LTR-I[ELVpc(+)]	408	VMDO01018267.1	+	34458	34865	ELVpc	4	102	9	317	103	121	68.932	6.54	39	2
-																																															
