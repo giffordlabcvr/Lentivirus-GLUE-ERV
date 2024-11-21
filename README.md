@@ -2,9 +2,7 @@
 
 <img src="md/lentivirus-glue-erv.jpg" align="right" alt="" width="220" />
 
-Welcome to the GitHub repository for **Lentivirus-GLUE-ERV**: an extension to **[Lentivirus-GLUE](https://github.com/giffordlabcvr/Lentivirus-GLUE)**.
-
-This project layer extends **[Lentivirus-GLUE](https://github.com/giffordlabcvr/Lentivirus-GLUE)** through the incorporation of endogenous retrovirus (ERV) sequence data.
+Welcome to the GitHub repository for **Lentivirus-GLUE-ERV**: an extension to **[Lentivirus-GLUE](https://github.com/giffordlabcvr/Lentivirus-GLUE)**. This project layer extends **[Lentivirus-GLUE](https://github.com/giffordlabcvr/Lentivirus-GLUE)** through the incorporation of endogenous retrovirus (ERV) sequence data.
 
 For many years, the scientific consensus was that lentiviruses---the retroviral genus that includes HIV---did not leave a fossil record in the genomes of their hosts. Endogenous retroviruses (ERVs) derived from other retroviral genera, such as *Gammaretrovirus* and *Betaretrovirus*, are widespread and well-documented, but no evidence of lentiviral ERVs had been found. This absence, combined with the extraordinary evolutionary speed observed in HIV during the HIV/AIDS pandemic, led many researchers to infer that lentiviruses were a relatively recent addition to the retroviral family, and might possibly have emerged within a timescale of thousands, rather than millions of years.
 
