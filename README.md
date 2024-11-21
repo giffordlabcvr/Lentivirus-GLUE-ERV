@@ -4,6 +4,8 @@
 
 Welcome to the GitHub repository for **Lentivirus-GLUE-ERV**: an extension to **[Lentivirus-GLUE](https://github.com/giffordlabcvr/Lentivirus-GLUE)**.
 
+This project layer extends **[Lentivirus-GLUE](https://github.com/giffordlabcvr/Lentivirus-GLUE)** through the incorporation of endogenous retrovirus (ERV) sequence data.
+
 For many years, the scientific consensus was that lentiviruses---the retroviral genus that includes HIV---did not leave a fossil record in the genomes of their hosts. Endogenous retroviruses (ERVs) derived from other retroviral genera, such as *Gammaretrovirus* and *Betaretrovirus*, are widespread and well-documented, but no evidence of lentiviral ERVs had been found. This absence, combined with the extraordinary evolutionary speed observed in HIV during the HIV/AIDS pandemic, led many researchers to infer that lentiviruses were a relatively recent addition to the retroviral family, and might possibly have emerged within a timescale of thousands, rather than millions of years.
 
 This view began to shift in 2007 with the publication of the European rabbit genome, which revealed the presence of rabbit endogenous lentivirus K (RELIK). RELIK was not an isolated curiosity; its presence in multiple leporid species demonstrated that this lentivirus had integrated into the genome of an ancient common ancestor at least 12 million years ago. This discovery provided definitive proof that lentiviruses have existed for far longer than previously assumed, upending the idea that they were a recent evolutionary phenomenon.
