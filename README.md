@@ -12,6 +12,8 @@ Since the discovery of RELIK, additional endogenous lentiviruses have been ident
 
 The rarity of endogenous lentiviruses raises intriguing questions about their biology and evolutionary history. Perhaps their genomic integration is less frequent or less likely to be preserved than that of other retroviruses. Alternatively, their sequences may degrade more rapidly due to evolutionary pressures, or their presence may be underrepresented in the genomes that have been studied to date. Regardless, the identification of these rare remnants has fundamentally reshaped our understanding of the lentivirus genus, pushing its origins back into deep evolutionary time.
 
+For more details please see the Lentivirus-GLUE **[User Guide](https://github.com/giffordlabcvr/Lentivirus-GLUE/wiki/Lentivirus-GLUE-ERV-Project-Background)**.
+
 ## Data Sources
 
 **Lentivirus-GLUE-ERV** is constructed using sequence data obtained from [NCBI Nucleotide](https://www.ncbi.nlm.nih.gov/nuccore).
