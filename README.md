@@ -21,7 +21,7 @@ For more details please see the Lentivirus-GLUE **[User Guide](https://github.co
 Installation
 ------------
 
-To install Lentivirus-GLUE-ERV, follow the instructions provided in the **[User Guide](https://github.com/giffordlabcvr/Lentivirus-GLUE/wiki)**.
+To install **Lentivirus-GLUE-ERV**, follow the instructions provided in the **[User Guide](https://github.com/giffordlabcvr/Lentivirus-GLUE/wiki)**.
 
 You can choose between:
 
