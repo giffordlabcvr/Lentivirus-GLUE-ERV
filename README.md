@@ -1,6 +1,6 @@
 ## Endogenous Retrovirus (ERV) Extension to Lentivirus-GLUE
 
-<img src="md/lentivirus-glue-erv.jpg" align="right" alt="" width="220" />
+<img src="md/lentivirus-glue-erv.png" align="right" alt="" width="240" />
 
 Welcome to the GitHub repository for **Lentivirus-GLUE-ERV**: an extension to **[Lentivirus-GLUE](https://github.com/giffordlabcvr/Lentivirus-GLUE)**. This project layer extends **[Lentivirus-GLUE](https://github.com/giffordlabcvr/Lentivirus-GLUE)** through the incorporation of endogenous retrovirus (ERV) sequence data.
 
