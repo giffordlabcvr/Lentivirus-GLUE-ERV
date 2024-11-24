@@ -23,11 +23,13 @@ project lentivirus
   # Import root alignment
   run file glue/build/erv/lentiErvRootAlignment.glue
 
-  # Add lentivirus ERV alignments to constrained alignment tree 
+  # Extend alignment tree to include ERV lineags
   run file glue/build/erv/lentiErvAlignmentTree.glue
 
   # Import tip alignments
   run file glue/build/erv/lentiErvTipAlignments.glue
+
+  # Derive constrained alignments from unconstrained
   run file glue/build/erv/lentiErvDeriveConstrainedTipAlignments.glue
   run file glue/build/erv/lentiErvRecordFeaturePresence.glue
 
