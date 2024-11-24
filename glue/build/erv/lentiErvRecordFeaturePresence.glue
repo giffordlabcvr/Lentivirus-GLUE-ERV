@@ -1,5 +1,5 @@
   delete module lentiFeaturePresenceRecorder
-  create module -f modules/build/core/lentiFeaturePresenceRecorder.xml
+  create module -f modules/build/erv/lentiFeaturePresenceRecorder.xml
 
   module lentiFeaturePresenceRecorder
      
