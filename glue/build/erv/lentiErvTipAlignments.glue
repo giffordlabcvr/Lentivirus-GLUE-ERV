@@ -1,5 +1,5 @@
 delete module unconstrainedAlignmentImporterSimple
-create module -f modules/build/core/unconstrainedAlignmentImporterSimple.xml
+create module -f modules/build/erv/unconstrainedAlignmentImporterSimple.xml
 
 #~# Import pre-built alignments of lentivirus ERVs
 

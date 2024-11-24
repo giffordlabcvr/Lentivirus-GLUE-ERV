@@ -24,7 +24,7 @@ _.each(loadResult, function(ervObj) {
 			//glue.log("INFO", "Entering locus data for sequence:", ervObj.sequenceID);
 
 			//glue.command(["set", "field", "locus_name", ervObj.locus_name]);
-			glue.command(["set", "field", "scaffold", ervObj.name]);
+			glue.command(["set", "field", "scaffold", ervObj.scaffold]);
 			glue.command(["set", "field", "host_sci_name", ervObj.organism]);
 			glue.command(["set", "field", "orientation", '+']);
 			glue.command(["set", "field", "start", 1]);
@@ -48,7 +48,6 @@ _.each(loadResult, function(ervObj) {
 	
 		glue.inMode("sequence/"+source_name+"/"+ervObj.sequenceID, function() {
 
-			glue.command(["set", "field", "name", ervObj.name]);
 			glue.command(["set", "field", "full_name", ervObj.name]);
 			//glue.command(["set", "field", "length", ervObj.sequence_length]);
 			glue.command(["set", "field", "species", ervObj.name]);			
